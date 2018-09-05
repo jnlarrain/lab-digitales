@@ -1,15 +1,12 @@
 module debouncer(
+
+
+
 );
 endmodule
 
 
 
-
-//library IEEE;
-//use IEEE.STD_LOGIC_1164.ALL;
-//use IEEE.std_logic_unsigned.all;
-//USE IEEE.NUMERIC_STD.ALL;
-//use IEEE.math_real.all;
 
 //entity Debouncer is
 //    Generic ( DEBNC_CLOCKS : INTEGER range 2 to (INTEGER'high) := 2**16;

@@ -1,5 +1,9 @@
 module mux(
-
+input [7:0] a, b, c, 
+input [1:0] sel,
+output [7:0] salida
 );
-endmodule
 
+assign  salida = sel[1] ? (sel[0] ? a : b) : c;
+
+endmodule
