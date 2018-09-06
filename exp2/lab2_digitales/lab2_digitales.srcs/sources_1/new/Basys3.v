@@ -46,4 +46,6 @@ module Basys3(
     //Falta por hacer
     debouncer();
     
+    leds_mgmt_2();
+    
 endmodule

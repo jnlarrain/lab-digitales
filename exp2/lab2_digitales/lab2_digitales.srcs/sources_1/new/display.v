@@ -4,16 +4,16 @@
 module display(
     input [1:0] display,
     input clk,
-    output reg [7:0] seg
+    output reg [6:0] seg
     );
 
 
 always @(*)
 case(display)
-    'b00:    seg = 'b00000001;
-    'b01:    seg = 'b00000010;
-    'b10:    seg = 'b00000011;
-    default: seg = 'b00000000;
+    'b01:    seg = 7'b0001111;
+    'b10:    seg = 7'b0010010;
+    'b11:    seg = 7'b0000110;
+    default: seg = 7'b0000000;
    
 endcase
 endmodule

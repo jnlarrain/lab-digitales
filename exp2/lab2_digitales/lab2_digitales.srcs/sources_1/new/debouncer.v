@@ -1,69 +1,30 @@
-module debouncer(
+// Source: fpga4student
 
-
-
-);
+module debouncer(input pb_1, clk, output pb_out);
+wire slow_clk_en;
+wire Q1, Q2 ,Q2_bar;
+clock_enable u1(clk, pb_1, slow_clk_en);
+my_dff_en d1(clk ,slow_clk_en, pb_1, Q1);
+my_dff_en d2(clk, slow_clk_en, Q1, Q2);
+assign Q2_bar = ~Q2;
+assign pb_out = Q1 & Q2_bar;
 endmodule
-
-
-
-
-//entity Debouncer is
-//    Generic ( DEBNC_CLOCKS : INTEGER range 2 to (INTEGER'high) := 2**16;
-//          PORT_WIDTH : INTEGER range 1 to (INTEGER'high) := 5);
-//    Port ( clk : in  std_logic;
-//           datain : in  std_logic_vector ((PORT_WIDTH - 1) downto 0);
-//           dataout : out  std_logic_vector ((PORT_WIDTH - 1) downto 0));
-//end Debouncer;
-
-//architecture Behavioral of Debouncer is
-//constant CNTR_WIDTH : integer := natural(ceil(LOG2(real(DEBNC_CLOCKS))));
-//constant CNTR_MAX : std_logic_vector((CNTR_WIDTH - 1) downto 0) := std_logic_vector(to_unsigned((DEBNC_CLOCKS - 1), CNTR_WIDTH));
-//type VECTOR_ARRAY_TYPE is array (integer range <>) of std_logic_vector((CNTR_WIDTH - 1) downto 0);
-
-//signal sig_cntrs_ary : VECTOR_ARRAY_TYPE (0 to (PORT_WIDTH - 1)) := (others=>(others=>'0'));
-
-//signal sig_out_reg : std_logic_vector((PORT_WIDTH - 1) downto 0) := (others => '0');
-
-//begin
-
-//debounce_process : process (clk)
-//begin
-//   if (rising_edge(clk)) then
-//   for index in 0 to (PORT_WIDTH - 1) loop
-//      if (sig_cntrs_ary(index) = CNTR_MAX) then
-//         sig_out_reg(index) <= not(sig_out_reg(index));
-//      else
-//            -- necesario para poder simular
-//      end if;
-//   end loop;
-//   else
-//        -- necesario para poder simular
-//   end if;
-//end process;
-
-//counter_process : process (clk)
-//begin
-//	if (rising_edge(clk)) then
-//	for index in 0 to (PORT_WIDTH - 1) loop
-	
-//		if ((sig_out_reg(index) = '1') xor (datain(index) = '1')) then
-//			if (sig_cntrs_ary(index) = CNTR_MAX) then
-//				sig_cntrs_ary(index) <= (others => '0');
-//			else
-//				sig_cntrs_ary(index) <= sig_cntrs_ary(index) + 1;
-//			end if;
-//		else
-//			sig_cntrs_ary(index) <= (others => '0');
-//		end if;
-		
-//	end loop;
-	
-//	else
-//	       -- necesario para poder simular
-//	end if;
-//end process;
-
-//dataout <= sig_out_reg;
-
-//end Behavioral;
+// Slow clock enable for debouncing button 
+module clock_enable(input Clk_100M, pb_1, output slow_clk_en);
+    reg [26:0]counter=0;
+    always @(posedge Clk_100M, negedge pb_1)
+    begin
+     if(pb_1==0)
+              counter <= 0;
+            else
+       counter <= (counter>=249999)?0:counter+1;
+    end
+    assign slow_clk_en = (counter == 249999)?1'b1:1'b0;
+endmodule
+// D-flip-flop with clock enable signal for debouncing module 
+module my_dff_en(input DFF_CLOCK, clock_enable,D, output reg Q=0);
+    always @ (posedge DFF_CLOCK) begin
+  if(clock_enable==1) 
+           Q <= D;
+    end
+endmodule 
