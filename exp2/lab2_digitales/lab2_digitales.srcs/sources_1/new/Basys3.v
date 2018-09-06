@@ -2,19 +2,18 @@
 
 module Basys3(
     input clk,
-    input sw,
-    input led,
-    input seg,
-    output JA, 
-    output an
+    input [15:0] sw,
+    input [15:0] led,
+    output [7:0] seg,
+    input [4:0] btn,
+    output [7:0] JA, 
+    output [3:0] an
     );
     
-    // Falta realizar los wires internos para las conecciones de los diferentes modulos
-    // Falta realizar las operaciones propias de los wires
-    // Falta seleccionar las frecuencias y senal
-    // Falta selector de boton
-    // Falta encender leds
-    assign an = 'b00;
+    wire clock;
+    wire [1:0] Fsel;
+    wire [1:0] Bsel;
+    assign an = 'b1110;
     
     // Listo llegar y conectar (creo)
     display(    
@@ -29,7 +28,7 @@ module Basys3(
     // Falta por conectar
     clock_divider(
     .clk(clk),
-    .speed(Sspeed),
+    .speed('b01),
     .clock(clock)
     
     );
@@ -41,10 +40,17 @@ module Basys3(
     cont_1();
     
     //Falta por hacer
-    cont_2();
+    cont_2(
+    .clk(btn[0]),
+    .direccion(Fsel)
+    );
     
     //Falta por hacer
-    debouncer();
+//    debouncer(
+//    .pb_in(btn[0]),
+//    .clk(clk),
+//    .pb_out(Bsel)
+//    );
     
     leds_mgmt_2();
     
