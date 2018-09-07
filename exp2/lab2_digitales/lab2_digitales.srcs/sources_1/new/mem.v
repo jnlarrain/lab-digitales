@@ -7,13 +7,4 @@ module mem(
     output [23:0] data_out
     );
     
-    
-reg [23:0] memoria [255:0];
-
-
-
-
-
-
-
 endmodule

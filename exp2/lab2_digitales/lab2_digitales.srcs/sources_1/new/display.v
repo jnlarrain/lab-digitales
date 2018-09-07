@@ -3,17 +3,10 @@
 
 module display(
     input [1:0] display,
-    input clk,
-    output reg [7:0] seg
+    output [6:0] segmento
     );
 
 
-always @(*)
-case(display)
-    'b00:    seg = 8'b11111001;
-    'b01:    seg = 8'b10100100;
-    'b10:    seg = 8'b11001111;
-    default: seg = 8'b11111111;
-   
-endcase
+assign  segmento = display[1] ? (display[0] ? 'b1001111 : 'b0000000 ): (display[0] ?  'b1111001 : 'b0100100);
+
 endmodule

@@ -4,8 +4,8 @@ module Basys3(
     input clk,
     input [15:0] sw,
     input [15:0] led,
-    output [7:0] seg,
-    input [4:0] btn,
+    input btnC,
+    output [6:0] seg,
     output [7:0] JA, 
     output [3:0] an
     );
@@ -13,45 +13,38 @@ module Basys3(
     wire clock;
     wire [1:0] Fsel;
     wire [1:0] Bsel;
+    wire [7:0] direccion;
+    wire [23:0] datos;
+    wire enable;
+    wire [7:0]leds;
+    wire [1:0] mux_sel;
+    wire [1:0] speed;
+    wire [1:0] pb_out;  // salida del debouncer
+    wire [1:0] pb_1;
     assign an = 'b1110;
     
     // Listo llegar y conectar (creo)
-    display(    
-    .display(Fsel),
-    .clk(clk),
-    .seg(seg)
-    );  
-    
+    display display1(mux_sel, seg);  
+      
     // Falta por hacer
-    mem();
+    memoria(direccion, datos);
+    
+        //Falta por hacer
+    cont_2 contador2(pb_out, mux_sel);
     
     // Falta por conectar
-    clock_divider(
-    .clk(clk),
-    .speed('b01),
-    .clock(clock)
-    
-    );
+    clock_divider nuevo_clock(clk, speed, clock);
     
     //Falta por conectar
-    mux();
+    mux(datos[23:16], datos[15:8], datos[7:0], mux_sel, leds);
     
     //Falta por hacer
-    cont_1();
+    cont_1 contador1(clock, enable, direccion);
     
     //Falta por hacer
-    cont_2(
-    .clk(btn[0]),
-    .direccion(Fsel)
-    );
-    
-    //Falta por hacer
-//    debouncer(
-//    .pb_in(btn[0]),
-//    .clk(clk),
-//    .pb_out(Bsel)
-//    );
+    debouncer(pb_1, clk, pb_out);
     
     leds_mgmt_2();
+   
     
 endmodule

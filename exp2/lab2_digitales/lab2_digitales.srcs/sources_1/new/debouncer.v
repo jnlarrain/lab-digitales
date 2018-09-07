@@ -1,6 +1,6 @@
 // Source: fpga4student
 
-module debouncer(input pb_in, clk, output pb_out);
+module debouncer(input pb_1, clk, output pb_out);
 wire slow_clk_en;
 wire Q1, Q2 ,Q2_bar;
 clock_enable u1(clk, pb_1, slow_clk_en);
