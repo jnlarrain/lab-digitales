@@ -17,7 +17,7 @@ module debouncer(
     wire q_add;                                     
     wire q_reset;
     
-    always @ ( posedge clk )
+    always @ (posedge clk)
     begin
         flipflop_1 <= btn_in;
         flipflop_2 <= flipflop_1;
@@ -25,7 +25,7 @@ module debouncer(
     end
  
  
-    assign q_reset = (flipflop_1  ^ flipflop_2);
+    assign q_reset = (flipflop_1 ^ flipflop_2);
                                   
     assign  q_add = ~(delay_count_reg[N-1]);     
  
@@ -37,7 +37,7 @@ module debouncer(
             delay_count_next <= delay_count_reg;
  
  
-    always @ ( posedge clk )
+    always @ (posedge clk)
         if(delay_count_reg[N-1] == 1'b1)
                 btn_out <= flipflop_2;
         else
