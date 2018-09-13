@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="38" Path="D:/Downloads/lab-digitales-2-ale/lab-digitales-2-ale/lab-digitales-2-ale.xpr">
+<Project Version="7" Minor="38" Path="C:/Users/jlarr/Desktop/lab-digitales/exp2/v2/lab-digitales-2-ale.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="de4650bebddb42d4ac5054556165ad58"/>
@@ -124,14 +124,6 @@
       </File>
       <File Path="$PSRCDIR/sources_1/new/main.v">
         <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/new/pins.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
