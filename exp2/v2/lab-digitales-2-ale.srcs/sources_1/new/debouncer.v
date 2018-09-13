@@ -30,12 +30,17 @@ module debouncer(
     assign  q_add = ~(delay_count_reg[N-1]);     
  
 
-    always @ (q_add, delay_count_reg)
-        if (q_add)
-            delay_count_next <= delay_count_reg + 1;
-        else
-            delay_count_next <= delay_count_reg;
- 
+    always @ (q_reset, q_add, delay_count_reg)
+        begin
+            case ({q_reset, q_add})
+                0:
+                    delay_count_next <= delay_count_reg;
+                1:
+                    delay_count_next <= delay_count_reg + 1;
+                default:
+                    delay_count_next <= 0;
+            endcase
+        end
  
     always @ (posedge clk)
         if(delay_count_reg[N-1] == 1'b1)
