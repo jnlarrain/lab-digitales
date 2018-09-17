@@ -3,7 +3,5 @@
 
 module main(
     );
-
-    
     
 endmodule

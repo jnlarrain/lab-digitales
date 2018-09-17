@@ -22,23 +22,15 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/jlarr/Desktop/lab-digitales/exp2/v2/lab-digitales-2-ale.cache/wt [current_project]
-set_property parent.project_path C:/Users/jlarr/Desktop/lab-digitales/exp2/v2/lab-digitales-2-ale.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/Alejandro/Documents/lab-digitales/exp3/lab3.cache/wt [current_project]
+set_property parent.project_path C:/Users/Alejandro/Documents/lab-digitales/exp3/lab3.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/jlarr/Desktop/lab-digitales/exp2/v2/lab-digitales-2-ale.cache/ip [current_project]
+set_property ip_output_repo c:/Users/Alejandro/Documents/lab-digitales/exp3/lab3.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  C:/Users/jlarr/Desktop/lab-digitales/exp2/v2/lab-digitales-2-ale.srcs/sources_1/new/clk_mgmt.v
-  C:/Users/jlarr/Desktop/lab-digitales/exp2/v2/lab-digitales-2-ale.srcs/sources_1/new/counter_1.v
-  C:/Users/jlarr/Desktop/lab-digitales/exp2/v2/lab-digitales-2-ale.srcs/sources_1/new/counter_2.v
-  C:/Users/jlarr/Desktop/lab-digitales/exp2/v2/lab-digitales-2-ale.srcs/sources_1/new/debouncer.v
-  C:/Users/jlarr/Desktop/lab-digitales/exp2/v2/lab-digitales-2-ale.srcs/sources_1/new/edge_detector.v
-  C:/Users/jlarr/Desktop/lab-digitales/exp2/v2/lab-digitales-2-ale.srcs/sources_1/new/led_mgmt.v
-  C:/Users/jlarr/Desktop/lab-digitales/exp2/v2/lab-digitales-2-ale.srcs/sources_1/new/memory.v
-  C:/Users/jlarr/Desktop/lab-digitales/exp2/v2/lab-digitales-2-ale.srcs/sources_1/new/mux.v
-  C:/Users/jlarr/Desktop/lab-digitales/exp2/v2/lab-digitales-2-ale.srcs/sources_1/new/seven_seg.v
-  C:/Users/jlarr/Desktop/lab-digitales/exp2/v2/lab-digitales-2-ale.srcs/sources_1/new/main.v
+  C:/Users/Alejandro/Documents/lab-digitales/exp3/lab3.srcs/sources_1/new/high_flow_detector.v
+  C:/Users/Alejandro/Documents/lab-digitales/exp3/lab3.srcs/sources_1/new/main.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -48,8 +40,8 @@ read_verilog -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/jlarr/Desktop/lab-digitales/exp2/v2/lab-digitales-2-ale.srcs/constrs_1/new/basys.xdc
-set_property used_in_implementation false [get_files C:/Users/jlarr/Desktop/lab-digitales/exp2/v2/lab-digitales-2-ale.srcs/constrs_1/new/basys.xdc]
+read_xdc C:/Users/Alejandro/Documents/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc
+set_property used_in_implementation false [get_files C:/Users/Alejandro/Documents/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc]
 
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]
