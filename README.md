@@ -1,4 +1,5 @@
 # lab-digitales
-laboratorio de sistemas digitales en verilog
+Laboratorio de Sistemas Digitales
 
-experiencia 2: generador de funciones
+Experiencia 2: Generador de funciones
+Experiencia 3: Sistema de control de tráfico
