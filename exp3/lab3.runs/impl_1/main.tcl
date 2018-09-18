@@ -65,15 +65,16 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a35tcpg236-1
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir C:/Users/Alejandro/Documents/lab-digitales/exp3/lab3.cache/wt [current_project]
-  set_property parent.project_path C:/Users/Alejandro/Documents/lab-digitales/exp3/lab3.xpr [current_project]
-  set_property ip_output_repo C:/Users/Alejandro/Documents/lab-digitales/exp3/lab3.cache/ip [current_project]
+  set_property webtalk.parent_dir {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.cache/wt} [current_project]
+  set_property parent.project_path {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.xpr} [current_project]
+  set_property ip_output_repo {{D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.cache/ip}} [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet C:/Users/Alejandro/Documents/lab-digitales/exp3/lab3.runs/synth_1/main.dcp
-  read_xdc C:/Users/Alejandro/Documents/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc
+  add_files -quiet {{D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.runs/synth_1/main.dcp}}
+  read_xdc {{D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc}}
   link_design -top main -part xc7a35tcpg236-1
   close_msg_db -file init_design.pb
 } RESULT]
