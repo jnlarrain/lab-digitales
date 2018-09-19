@@ -14,7 +14,7 @@ assign count = cuenta;
  
 always @(posedge clk)
 begin
-if((cuenta <1) & up)
+if((cuenta <1) && up)
 cuenta = cuenta + 1;
 else if (cross_amb)
 cuenta = cuenta - 1;

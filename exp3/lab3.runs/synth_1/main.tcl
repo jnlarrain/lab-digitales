@@ -17,6 +17,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_param xicom.use_bs_reader 1
 create_project -in_memory -part xc7a35tcpg236-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -39,6 +40,7 @@ read_verilog -library xil_defaultlib {
   {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/edge_detector.v}
   {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/flow_led_mgmt.v}
   {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/high_flow_detector.v}
+  {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/pulse_generator.v}
   {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/seven_seg_mgmt.v}
   {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/stoplight_led_mgmt.v}
   {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/stoplight_state_mgmt.v}

@@ -64,7 +64,7 @@ module seven_seg(
                               7'b0000110,
                               7'b0001110};
         
-    assign s_seg = segmentos[number];
+    assign s_seg = en ? segmentos[number] : 7'b1111111;
 
     always @ (posedge clk)
     begin

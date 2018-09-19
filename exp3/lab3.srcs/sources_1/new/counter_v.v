@@ -6,7 +6,7 @@ module counter_v(
     input clk,
     input up,
     input cross_v,
-    output count
+    output [6:0]count
 );
    
 reg [6:0]cuenta;
@@ -14,7 +14,7 @@ assign count = cuenta;
  
 always @(posedge clk)
 begin
-if((cuenta <98) & up)
+if((cuenta <98) && up)
 cuenta = cuenta + 1;
 else if (cross_v)
 cuenta = cuenta - 1;
