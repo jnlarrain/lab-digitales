@@ -6,8 +6,9 @@ module main(
     input btnC,     // ambulancia
     input btnR,     // horizontal
     input btnU,     // vertical
-    input [15:0]sw,
-    input [3:0]led,
+    input btnL,
+    input [3:0]sw,
+    output [3:0]led,
     output [6:0]seg,
     output [3:0]an,
     output [5:0]JA
@@ -31,7 +32,9 @@ wire s_btnD;
 wire s_btnR;
 wire high_flow;
 
+
 assign en = sw[0];
+
 
 seven_seg(clk, en, qty_v, qty_h, qty_amb, an, seg);
 stoplight_led_mgmt(en, state_v, state_h, JA);
@@ -51,8 +54,6 @@ stoplight_state_mgmt(clk, pulse, ss_btnC, high_flow, state_v, state_h);
 cross_v(clk, pulse, qty_v, qty_amb, state_v, cross_v, cross_amb);
 cross_h(clk, pulse, qty_h, state_h, cross_h);
 high_flow_detector(qty_v, qty_h, qty_amb, high_flow);
-
-
 
 
 

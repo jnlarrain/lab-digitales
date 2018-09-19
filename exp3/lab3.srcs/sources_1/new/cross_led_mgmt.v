@@ -19,8 +19,13 @@ wire led;
 assign led = en ? ((time_counter>0) ? 1'b1 : 1'b0): 1'b0;
 assign s_led = led ? status : 3'b000;
 
-always @(posedge cross_v,posedge cross_h,posedge croos_amb)
+always @(*)
 begin
+if (pulse)
+begin
+if(time_counter > 0) 
+time_counter = time_counter-1;
+end
 if(time_counter == 0)
 time_counter = 5;
 if (cross_h)
@@ -29,12 +34,6 @@ else if (cross_v)
 status = 3'b010;
 else if (croos_amb)
 status = 3'b100;
-end
-
-always @(posedge pulse)
-begin
-if(time_counter > 0) 
-time_counter = time_counter-1;
 end
 
 endmodule

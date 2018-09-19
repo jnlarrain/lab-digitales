@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Wed Sep 19 14:47:05 2018
+| Date         : Wed Sep 19 16:37:32 2018
 | Host         : DESKTOP-GTSVVT5 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
 | Design       : main
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    11 |
-| Unused register locations in slices containing registers |    32 |
+| Number of unique control sets                            |    15 |
+| Unused register locations in slices containing registers |    52 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,6 +34,8 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
+|      2 |            3 |
+|      6 |            1 |
 |      8 |            2 |
 |     12 |            1 |
 |     14 |            2 |
@@ -47,10 +49,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              42 |           14 |
+| No           | No                    | No                     |              52 |           18 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              82 |           11 |
-| Yes          | No                    | No                     |              28 |            6 |
+| No           | Yes                   | No                     |              84 |           12 |
+| Yes          | No                    | No                     |              28 |            5 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |             160 |           25 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -59,20 +61,24 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+-----------------------------------------------------+-----------------------------------------------------+------------------+----------------+
-|  Clock Signal  |                    Enable Signal                    |                   Set/Reset Signal                  | Slice Load Count | Bel Load Count |
-+----------------+-----------------------------------------------------+-----------------------------------------------------+------------------+----------------+
-|  clk_IBUF_BUFG | nolabel_line49/E[0]                                 | nolabel_line50/SS[0]                                |                1 |              8 |
-|  clk_IBUF_BUFG | nolabel_line49/E[0]                                 | nolabel_line52/cross_countdown[3]_i_1__0_n_0        |                1 |              8 |
-|  clk_IBUF_BUFG | ambulances_debouncer/E[0]                           | nolabel_line50/counter[5]_i_1_n_0                   |                2 |             12 |
-|  clk_IBUF_BUFG | nolabel_line44/cuenta[6]_i_1__0_n_0                 |                                                     |                3 |             14 |
-|  clk_IBUF_BUFG | nolabel_line43/cuenta[6]_i_1_n_0                    |                                                     |                3 |             14 |
-|  clk_IBUF_BUFG |                                                     | nolabel_line36/clear                                |                5 |             34 |
-|  clk_IBUF_BUFG |                                                     |                                                     |               14 |             42 |
-|  clk_IBUF_BUFG | ambulances_debouncer/delay_count_reg[21]_i_2_n_0    | ambulances_debouncer/delay_count_reg[21]_i_1_n_0    |                7 |             44 |
-|  clk_IBUF_BUFG | horizontal_debouncer/delay_count_reg[21]_i_2__1_n_0 | horizontal_debouncer/delay_count_reg[21]_i_1__1_n_0 |                7 |             44 |
-|  clk_IBUF_BUFG | vertical_debouncer/delay_count_reg[21]_i_2__0_n_0   | vertical_debouncer/delay_count_reg[21]_i_1__0_n_0   |                7 |             44 |
-|  clk_IBUF_BUFG |                                                     | nolabel_line49/clear                                |                6 |             48 |
-+----------------+-----------------------------------------------------+-----------------------------------------------------+------------------+----------------+
++---------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+------------------+----------------+
+|                 Clock Signal                |                    Enable Signal                    |                   Set/Reset Signal                  | Slice Load Count | Bel Load Count |
++---------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+------------------+----------------+
+|  nolabel_line77/E[0]                        |                                                     | nolabel_line78/AR[1]                                |                1 |              2 |
+|  nolabel_line67/status_reg[0]/G0            |                                                     |                                                     |                1 |              2 |
+|  nolabel_line67/status_reg[1]/G0            |                                                     |                                                     |                1 |              2 |
+|  nolabel_line67/time_counter_reg[2]_i_2_n_0 |                                                     |                                                     |                1 |              6 |
+|  clk_IBUF_BUFG                              | nolabel_line75/pulse                                | nolabel_line75/SS[0]                                |                1 |              8 |
+|  clk_IBUF_BUFG                              | nolabel_line75/pulse                                | nolabel_line78/cross_countdown                      |                1 |              8 |
+|  clk_IBUF_BUFG                              | nolabel_line75/E[0]                                 | nolabel_line76/counter[5]_i_1_n_0                   |                2 |             12 |
+|  clk_IBUF_BUFG                              | nolabel_line77/cuenta_reg[0][0]                     |                                                     |                3 |             14 |
+|  clk_IBUF_BUFG                              | ambulances_pulse/E[0]                               |                                                     |                2 |             14 |
+|  clk_IBUF_BUFG                              |                                                     | nolabel_line62/clear                                |                5 |             34 |
+|  clk_IBUF_BUFG                              |                                                     |                                                     |               15 |             42 |
+|  clk_IBUF_BUFG                              | ambulances_debouncer/delay_count_reg[21]_i_2_n_0    | ambulances_debouncer/delay_count_reg[21]_i_1_n_0    |                7 |             44 |
+|  clk_IBUF_BUFG                              | horizontal_debouncer/delay_count_reg[21]_i_2__1_n_0 | horizontal_debouncer/delay_count_reg[21]_i_1__1_n_0 |                7 |             44 |
+|  clk_IBUF_BUFG                              | vertical_debouncer/delay_count_reg[21]_i_2__0_n_0   | vertical_debouncer/delay_count_reg[21]_i_1__0_n_0   |                7 |             44 |
+|  clk_IBUF_BUFG                              |                                                     | nolabel_line75/clear                                |                6 |             48 |
++---------------------------------------------+-----------------------------------------------------+-----------------------------------------------------+------------------+----------------+
 
 
