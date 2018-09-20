@@ -30,7 +30,7 @@ module seven_seg_mgmt(
     assign dec1 = (qty_1+qty_amb - uni1)/10;
     assign dec2 = (qty_2 - uni2)/10;
     assign s_an = en ? (display[1] ? (display[0] ? 4'b1011 : 4'b0111) : (display[0] ? 4'b1110 : 4'b1101)) : 4'b0000;
-    assign number = display[1] ? (display[0] ? uni2 : dec2) : (display[0] ? uni1 : dec1);
+    assign number = display[1] ? (display[0] ? uni1 : dec1) : (display[0] ? uni2 : dec2);
     
     assign {segmentos[0],
             segmentos[1],
