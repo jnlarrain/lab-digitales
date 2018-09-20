@@ -3,7 +3,7 @@
 module cross_h(
     input clk,
     input pulse,
-    input qty_h,
+    input [6:0] qty_h,
     input [1:0] state_h,
     output cross_h
     );
