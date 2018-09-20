@@ -3,6 +3,7 @@
 module cross_h(
     input clk,
     input pulse,
+    input en, 
     input [6:0] qty_h,
     input [1:0] state_h,
     output cross_h
@@ -14,7 +15,7 @@ module cross_h(
     always @ (posedge clk)
         begin
         cross_h_reg = 0;
-        if (pulse)
+        if (pulse && en)
             begin
             if (cross_countdown > 0)
                 cross_countdown = cross_countdown - 1;
