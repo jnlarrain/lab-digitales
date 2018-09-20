@@ -16,7 +16,7 @@ always @(posedge clk)
 begin
 if((cuenta <1) && up)
 cuenta = cuenta + 1;
-else if (cross_amb)
+else if (cross_amb&&(cuenta>0))
 cuenta = cuenta - 1;
 end    
 endmodule
