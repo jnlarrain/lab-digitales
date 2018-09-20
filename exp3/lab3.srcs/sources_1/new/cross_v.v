@@ -3,6 +3,7 @@
 module cross_v(
     input clk,
     input pulse,
+    input en,
     input [6:0] qty_v,
     input qty_amb,
     input [1:0] state_v,
@@ -18,7 +19,7 @@ module cross_v(
         begin
         cross_v_reg <= 0;        
         cross_amb_reg <= 0;
-        if (pulse)
+        if (pulse && en)
             begin
             if (cross_countdown > 0)
                 cross_countdown = cross_countdown - 1;
