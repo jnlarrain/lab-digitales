@@ -1,10 +1,10 @@
 `timescale 1ns / 1ps
 /*
 qty_1 y qty_2 dos son variables de 7 bits. 
-El número decimal de cada variable será mostrado en los displays de siete segmentos. 
+El nÃºmero decimal de cada variable serÃ¡ mostrado en los displays de siete segmentos. 
 Se debe tomar en cuenta la presencia de un ambulancia en la calle vertical.
 */
-module seven_seg(
+module seven_seg_mgmt(
     input clk,
     input en,               // enable
     input [6:0] qty_1,      // quantity 1
