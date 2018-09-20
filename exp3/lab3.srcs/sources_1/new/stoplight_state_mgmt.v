@@ -14,8 +14,8 @@ module stoplight_state_mgmt(
     reg [5:0] counter;
     wire [5:0] counter_max;
     
-    assign counter_max = high_flow ? (state % 3 == 2 ? (5) : (state % 3 == 1 ? (10) : (30)))
-                                   : (state % 3 == 2 ? (5) : (state % 3 == 1 ? (10) : (60)));
+    assign counter_max = high_flow ? (state % 3 == 2 ? (5) : (state % 3 == 1 ? (10) : (60)))
+                                   : (state % 3 == 2 ? (5) : (state % 3 == 1 ? (10) : (30)));
                                    
     assign state_v = (state == 0) ? 0
                    : (state == 1) ? 1
