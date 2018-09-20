@@ -3,7 +3,7 @@
 module cross_v(
     input clk,
     input pulse,
-    input qty_v,
+    input [6:0] qty_v,
     input qty_amb,
     input [1:0] state_v,
     output cross_v,
