@@ -35,7 +35,7 @@ module main(
     assign en = sw[0];
 
 
-    seven_seg(clk, en, qty_v, qty_h, qty_amb, an, seg);
+    seven_seg_mgmt(clk, en, qty_v, qty_h, qty_amb, an, seg);
     stoplight_led_mgmt(en, state_v, state_h, JA);
     debouncer ambulances_debouncer(clk, btnC, s_btnC);
     debouncer vertical_debouncer(clk, btnU, s_btnD);
