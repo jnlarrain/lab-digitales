@@ -23,28 +23,28 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.cache/wt} [current_project]
-set_property parent.project_path {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.xpr} [current_project]
+set_property webtalk.parent_dir C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.cache/wt [current_project]
+set_property parent.project_path C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo {d:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.cache/ip} [current_project]
+set_property ip_output_repo c:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/counter_amb.v}
-  {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/counter_h.v}
-  {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/counter_v.v}
-  {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/cross_h.v}
-  {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/cross_led_mgmt.v}
-  {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/cross_v.v}
-  {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/debouncer.v}
-  {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/edge_detector.v}
-  {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/flow_led_mgmt.v}
-  {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/high_flow_detector.v}
-  {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/pulse_generator.v}
-  {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/seven_seg_mgmt.v}
-  {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/stoplight_led_mgmt.v}
-  {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/stoplight_state_mgmt.v}
-  {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/main.v}
+  C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/counter_amb.v
+  C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/counter_h.v
+  C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/counter_v.v
+  C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/cross_h.v
+  C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/cross_led_mgmt.v
+  C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/cross_v.v
+  C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/debouncer.v
+  C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/edge_detector.v
+  C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/flow_led_mgmt.v
+  C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/high_flow_detector.v
+  C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/pulse_generator.v
+  C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/seven_seg_mgmt.v
+  C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/stoplight_led_mgmt.v
+  C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/stoplight_state_mgmt.v
+  C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/main_2.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -54,8 +54,8 @@ read_verilog -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc}}
-set_property used_in_implementation false [get_files {{D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc}}]
+read_xdc C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc
+set_property used_in_implementation false [get_files C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc]
 
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]

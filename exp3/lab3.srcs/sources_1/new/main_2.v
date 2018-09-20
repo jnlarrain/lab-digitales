@@ -60,12 +60,12 @@ module main(
         
     // Manejo de LEDs
     flow_led_mgmt(en, high_flow, led[3]);
-    //cross_led_mgmt(en, cross_v, cross_h, cross_amb, pulse, led[2:0]);
+    cross_led_mgmt(en, clk, cross_v, cross_h, cross_amb, pulse, led[2:0]);
     stoplight_led_mgmt(en, state_v, state_h, {led[12:10], led[15:13]}); // Poner JA como último parámetro
     seven_seg_mgmt(clk, en, qty_v, qty_h, qty_amb, an, seg);
     
     // Estos reemplazan temporalmente al cross_led_mgmt. Cambian el estado de un led cuando pasa un auto.
-    counter_temp(clk, cross_h, led[0]);
-    counter_temp(clk, cross_v, led[1]);
-    counter_temp(clk, cross_amb, led[2]);
+//    counter_temp(clk, cross_h, led[0]);
+//    counter_temp(clk, cross_v, led[1]);
+//    counter_temp(clk, cross_amb, led[2]);
 endmodule

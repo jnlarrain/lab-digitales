@@ -2,12 +2,12 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Sep 19 16:36:14 2018
-# Process ID: 15444
-# Current directory: D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.runs/synth_1
+# Start of session at: Thu Sep 20 13:25:27 2018
+# Process ID: 9696
+# Current directory: C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.runs/synth_1
 # Command line: vivado.exe -log main.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source main.tcl
-# Log file: D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.runs/synth_1/main.vds
-# Journal file: D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.runs/synth_1\vivado.jou
+# Log file: C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.runs/synth_1/main.vds
+# Journal file: C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source main.tcl -notrace
 Command: synth_design -top main -part xc7a35tcpg236-1 -effort_level quick
@@ -16,50 +16,65 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 1488 
+INFO: Helper process launched with PID 8280 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 357.367 ; gain = 99.105
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 357.621 ; gain = 99.023
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'main' [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/main.v:4]
-INFO: [Synth 8-6157] synthesizing module 'seven_seg' [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/seven_seg_mgmt.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'seven_seg' (1#1) [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/seven_seg_mgmt.v:7]
-INFO: [Synth 8-6157] synthesizing module 'stoplight_led_mgmt' [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/stoplight_led_mgmt.v:8]
-INFO: [Synth 8-6155] done synthesizing module 'stoplight_led_mgmt' (2#1) [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/stoplight_led_mgmt.v:8]
-INFO: [Synth 8-6157] synthesizing module 'debouncer' [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/debouncer.v:5]
-	Parameter N bound to: 22 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'debouncer' (3#1) [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/debouncer.v:5]
-INFO: [Synth 8-6157] synthesizing module 'cross_led_mgmt' [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/cross_led_mgmt.v:7]
-INFO: [Synth 8-6155] done synthesizing module 'cross_led_mgmt' (4#1) [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/cross_led_mgmt.v:7]
-INFO: [Synth 8-6157] synthesizing module 'flow_led_mgmt' [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/flow_led_mgmt.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'flow_led_mgmt' (5#1) [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/flow_led_mgmt.v:5]
-INFO: [Synth 8-6157] synthesizing module 'counter_v' [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/counter_v.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'counter_v' (6#1) [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/counter_v.v:5]
-INFO: [Synth 8-6157] synthesizing module 'counter_h' [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/counter_h.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'counter_h' (7#1) [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/counter_h.v:5]
-INFO: [Synth 8-6157] synthesizing module 'counter_amb' [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/counter_amb.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'counter_amb' (8#1) [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/counter_amb.v:5]
-INFO: [Synth 8-6157] synthesizing module 'edge_detector' [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/edge_detector.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'edge_detector' (9#1) [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/edge_detector.v:3]
-INFO: [Synth 8-6157] synthesizing module 'pulse_generator' [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/pulse_generator.v:3]
+INFO: [Synth 8-6157] synthesizing module 'main' [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/main_2.v:3]
+INFO: [Synth 8-6157] synthesizing module 'pulse_generator' [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/pulse_generator.v:3]
 	Parameter max_count bound to: 10000000 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'pulse_generator' (10#1) [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/pulse_generator.v:3]
-INFO: [Synth 8-6157] synthesizing module 'stoplight_state_mgmt' [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/stoplight_state_mgmt.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'stoplight_state_mgmt' (11#1) [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/stoplight_state_mgmt.v:3]
-INFO: [Synth 8-6157] synthesizing module 'cross_v' [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/cross_v.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'cross_v' (12#1) [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/cross_v.v:3]
-WARNING: [Synth 8-689] width (7) of port connection 'qty_v' does not match port width (1) of module 'cross_v' [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/main.v:77]
-INFO: [Synth 8-6157] synthesizing module 'cross_h' [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/cross_h.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'cross_h' (13#1) [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/cross_h.v:3]
-WARNING: [Synth 8-689] width (7) of port connection 'qty_h' does not match port width (1) of module 'cross_h' [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/main.v:78]
-INFO: [Synth 8-6157] synthesizing module 'high_flow_detector' [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/high_flow_detector.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'high_flow_detector' (14#1) [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/high_flow_detector.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'main' (15#1) [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/main.v:4]
-WARNING: [Synth 8-3331] design main has unconnected port btnL
+INFO: [Synth 8-6155] done synthesizing module 'pulse_generator' (1#1) [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/pulse_generator.v:3]
+INFO: [Synth 8-6157] synthesizing module 'debouncer' [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/debouncer.v:5]
+	Parameter N bound to: 22 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'debouncer' (2#1) [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/debouncer.v:5]
+INFO: [Synth 8-6157] synthesizing module 'edge_detector' [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/edge_detector.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'edge_detector' (3#1) [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/edge_detector.v:3]
+INFO: [Synth 8-6157] synthesizing module 'stoplight_state_mgmt' [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/stoplight_state_mgmt.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'stoplight_state_mgmt' (4#1) [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/stoplight_state_mgmt.v:3]
+INFO: [Synth 8-6157] synthesizing module 'cross_v' [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/cross_v.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'cross_v' (5#1) [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/cross_v.v:3]
+INFO: [Synth 8-6157] synthesizing module 'cross_h' [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/cross_h.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'cross_h' (6#1) [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/cross_h.v:3]
+INFO: [Synth 8-6157] synthesizing module 'counter_h' [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/counter_h.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'counter_h' (7#1) [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/counter_h.v:5]
+INFO: [Synth 8-6157] synthesizing module 'counter_v' [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/counter_v.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'counter_v' (8#1) [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/counter_v.v:5]
+INFO: [Synth 8-6157] synthesizing module 'counter_amb' [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/counter_amb.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'counter_amb' (9#1) [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/counter_amb.v:5]
+INFO: [Synth 8-6157] synthesizing module 'high_flow_detector' [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/high_flow_detector.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'high_flow_detector' (10#1) [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/high_flow_detector.v:3]
+INFO: [Synth 8-6157] synthesizing module 'flow_led_mgmt' [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/flow_led_mgmt.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'flow_led_mgmt' (11#1) [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/flow_led_mgmt.v:5]
+INFO: [Synth 8-6157] synthesizing module 'cross_led_mgmt' [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/cross_led_mgmt.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'cross_led_mgmt' (12#1) [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/cross_led_mgmt.v:7]
+INFO: [Synth 8-6157] synthesizing module 'stoplight_led_mgmt' [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/stoplight_led_mgmt.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'stoplight_led_mgmt' (13#1) [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/stoplight_led_mgmt.v:8]
+INFO: [Synth 8-6157] synthesizing module 'seven_seg_mgmt' [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/seven_seg_mgmt.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'seven_seg_mgmt' (14#1) [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/seven_seg_mgmt.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'main' (15#1) [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/main_2.v:3]
+WARNING: [Synth 8-3331] design main has unconnected port led[9]
+WARNING: [Synth 8-3331] design main has unconnected port led[8]
+WARNING: [Synth 8-3331] design main has unconnected port led[7]
+WARNING: [Synth 8-3331] design main has unconnected port led[6]
+WARNING: [Synth 8-3331] design main has unconnected port led[5]
+WARNING: [Synth 8-3331] design main has unconnected port led[4]
+WARNING: [Synth 8-3331] design main has unconnected port sw[14]
+WARNING: [Synth 8-3331] design main has unconnected port sw[13]
+WARNING: [Synth 8-3331] design main has unconnected port sw[12]
+WARNING: [Synth 8-3331] design main has unconnected port sw[11]
+WARNING: [Synth 8-3331] design main has unconnected port sw[10]
+WARNING: [Synth 8-3331] design main has unconnected port sw[9]
+WARNING: [Synth 8-3331] design main has unconnected port sw[8]
+WARNING: [Synth 8-3331] design main has unconnected port sw[7]
+WARNING: [Synth 8-3331] design main has unconnected port sw[6]
+WARNING: [Synth 8-3331] design main has unconnected port sw[5]
+WARNING: [Synth 8-3331] design main has unconnected port sw[4]
 WARNING: [Synth 8-3331] design main has unconnected port sw[3]
 WARNING: [Synth 8-3331] design main has unconnected port sw[2]
 WARNING: [Synth 8-3331] design main has unconnected port sw[1]
+WARNING: [Synth 8-3331] design main has unconnected port sw[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 412.172 ; gain = 153.910
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 412.406 ; gain = 153.809
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -72,48 +87,95 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 412.172 ; gain = 153.910
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 412.406 ; gain = 153.809
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 412.172 ; gain = 153.910
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 412.406 ; gain = 153.809
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc]
-Finished Parsing XDC File [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
+Parsing XDC File [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc]
+WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:113]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:113]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnU'. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:114]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:114]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnL'. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:115]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:115]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'btnL'. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:116]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:116]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[0]'. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:126]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:126]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[0]'. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:127]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:127]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[1]'. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:129]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:129]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[1]'. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:130]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:130]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[2]'. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:132]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:132]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[2]'. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:133]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:133]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[3]'. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:135]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:135]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[3]'. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:136]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:136]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[4]'. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:138]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:138]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[4]'. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:139]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:139]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[5]'. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:141]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:141]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'JA[5]'. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:142]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc:142]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/constrs_1/new/basys.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/main_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/main_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 746.984 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 747.930 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 746.984 ; gain = 488.723
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 747.930 ; gain = 489.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 746.984 ; gain = 488.723
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 747.930 ; gain = 489.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 746.984 ; gain = 488.723
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 747.930 ; gain = 489.332
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/counter_v.v:13]
-INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/counter_h.v:13]
-WARNING: [Synth 8-327] inferring latch for variable 'time_counter_reg' [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/cross_led_mgmt.v:19]
-WARNING: [Synth 8-327] inferring latch for variable 'status_reg' [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.srcs/sources_1/new/cross_led_mgmt.v:20]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/counter_h.v:13]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.srcs/sources_1/new/counter_v.v:13]
+INFO: [Synth 8-5544] ROM "last" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 746.984 ; gain = 488.723
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 747.930 ; gain = 489.332
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -142,25 +204,26 @@ Detailed RTL Component Info :
 	                7 Bit    Registers := 2     
 	                6 Bit    Registers := 1     
 	                4 Bit    Registers := 2     
-	                3 Bit    Registers := 1     
+	                3 Bit    Registers := 3     
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 16    
 +---Muxes : 
 	   2 Input     22 Bit        Muxes := 6     
 	   2 Input      9 Bit        Muxes := 1     
+	   3 Input      7 Bit        Muxes := 1     
 	  16 Input      7 Bit        Muxes := 1     
 	   2 Input      7 Bit        Muxes := 1     
-	   3 Input      7 Bit        Muxes := 1     
 	   3 Input      6 Bit        Muxes := 1     
-	   5 Input      4 Bit        Muxes := 1     
 	   2 Input      4 Bit        Muxes := 9     
 	   3 Input      4 Bit        Muxes := 1     
-	   2 Input      3 Bit        Muxes := 7     
-	   3 Input      3 Bit        Muxes := 3     
+	   5 Input      4 Bit        Muxes := 1     
 	   5 Input      3 Bit        Muxes := 1     
+	   2 Input      3 Bit        Muxes := 5     
+	   3 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 3     
 	   2 Input      1 Bit        Muxes := 14    
 	   6 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -168,25 +231,6 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module seven_seg 
-Detailed RTL Component Info : 
-+---Adders : 
-	   3 Input     32 Bit       Adders := 2     
-	   2 Input      8 Bit       Adders := 1     
-	   2 Input      2 Bit       Adders := 1     
-+---Registers : 
-	                2 Bit    Registers := 1     
-+---Muxes : 
-	  16 Input      7 Bit        Muxes := 1     
-	   2 Input      7 Bit        Muxes := 1     
-	   5 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 3     
-Module stoplight_led_mgmt 
-Detailed RTL Component Info : 
-+---Muxes : 
-	   2 Input      3 Bit        Muxes := 2     
-	   3 Input      3 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 2     
 Module debouncer 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -199,41 +243,6 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input     22 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 2     
-Module cross_led_mgmt 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      3 Bit       Adders := 1     
-+---Muxes : 
-	   2 Input      3 Bit        Muxes := 4     
-	   3 Input      3 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
-Module counter_v 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      7 Bit       Adders := 1     
-+---Registers : 
-	                7 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
-Module counter_h 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      7 Bit       Adders := 1     
-+---Registers : 
-	                7 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
-Module counter_amb 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input      1 Bit       Adders := 1     
-+---Registers : 
-	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
 Module edge_detector 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -274,10 +283,66 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   2 Input      4 Bit        Muxes := 2     
+Module counter_h 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module counter_v 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	                7 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module counter_amb 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      1 Bit       Adders := 1     
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
 Module high_flow_detector 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input      8 Bit       Adders := 1     
+Module cross_led_mgmt 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module stoplight_led_mgmt 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 2     
+	   3 Input      3 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+Module seven_seg_mgmt 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     32 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	  16 Input      7 Bit        Muxes := 1     
+	   2 Input      7 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -295,12 +360,29 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-5544] ROM "p_0_out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-WARNING: [Synth 8-3331] design main has unconnected port btnL
+WARNING: [Synth 8-3331] design main has unconnected port led[9]
+WARNING: [Synth 8-3331] design main has unconnected port led[8]
+WARNING: [Synth 8-3331] design main has unconnected port led[7]
+WARNING: [Synth 8-3331] design main has unconnected port led[6]
+WARNING: [Synth 8-3331] design main has unconnected port led[5]
+WARNING: [Synth 8-3331] design main has unconnected port led[4]
+WARNING: [Synth 8-3331] design main has unconnected port sw[14]
+WARNING: [Synth 8-3331] design main has unconnected port sw[13]
+WARNING: [Synth 8-3331] design main has unconnected port sw[12]
+WARNING: [Synth 8-3331] design main has unconnected port sw[11]
+WARNING: [Synth 8-3331] design main has unconnected port sw[10]
+WARNING: [Synth 8-3331] design main has unconnected port sw[9]
+WARNING: [Synth 8-3331] design main has unconnected port sw[8]
+WARNING: [Synth 8-3331] design main has unconnected port sw[7]
+WARNING: [Synth 8-3331] design main has unconnected port sw[6]
+WARNING: [Synth 8-3331] design main has unconnected port sw[5]
+WARNING: [Synth 8-3331] design main has unconnected port sw[4]
 WARNING: [Synth 8-3331] design main has unconnected port sw[3]
 WARNING: [Synth 8-3331] design main has unconnected port sw[2]
 WARNING: [Synth 8-3331] design main has unconnected port sw[1]
+WARNING: [Synth 8-3331] design main has unconnected port sw[0]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 746.984 ; gain = 488.723
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 747.930 ; gain = 489.332
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -312,13 +394,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:26 . Memory (MB): peak = 746.984 ; gain = 488.723
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 747.930 ; gain = 489.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 763.512 ; gain = 505.250
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 762.563 ; gain = 503.965
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -330,7 +412,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 773.246 ; gain = 514.984
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 774.063 ; gain = 515.465
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -354,7 +436,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 773.246 ; gain = 514.984
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 774.063 ; gain = 515.465
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -367,7 +449,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 773.246 ; gain = 514.984
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 774.063 ; gain = 515.465
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -379,25 +461,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 773.246 ; gain = 514.984
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 774.063 ; gain = 515.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 773.246 ; gain = 514.984
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 774.063 ; gain = 515.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 773.246 ; gain = 514.984
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 774.063 ; gain = 515.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 773.246 ; gain = 514.984
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 774.063 ; gain = 515.465
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -415,66 +497,61 @@ Report Cell Usage:
 +------+-------+------+
 |1     |BUFG   |     1|
 |2     |CARRY4 |   166|
-|3     |LUT1   |    30|
-|4     |LUT2   |   182|
-|5     |LUT3   |   220|
-|6     |LUT4   |   203|
-|7     |LUT5   |    91|
-|8     |LUT6   |   193|
+|3     |LUT1   |    33|
+|4     |LUT2   |   185|
+|5     |LUT3   |   213|
+|6     |LUT4   |   200|
+|7     |LUT5   |    94|
+|8     |LUT6   |   202|
 |9     |MUXF7  |     7|
-|10    |FDRE   |   148|
+|10    |FDRE   |   154|
 |11    |FDSE   |     8|
-|12    |LD     |     3|
-|13    |LDC    |     1|
-|14    |LDCP   |     2|
-|15    |IBUF   |     5|
-|16    |OBUF   |    21|
+|12    |IBUF   |     5|
+|13    |OBUF   |    21|
+|14    |OBUFT  |     6|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+-----------------------+---------------------+------+
-|      |Instance               |Module               |Cells |
-+------+-----------------------+---------------------+------+
-|1     |top                    |                     |  1281|
-|2     |  nolabel_line62       |seven_seg            |    40|
-|3     |  ambulances_debouncer |debouncer            |    36|
-|4     |  ambulances_pulse     |edge_detector        |     4|
-|5     |  horizontal_debouncer |debouncer_0          |    35|
-|6     |  horizontal_pulse     |edge_detector_1      |     1|
-|7     |  nolabel_line67       |cross_led_mgmt       |    13|
-|8     |  nolabel_line69       |counter_v            |   112|
-|9     |  nolabel_line70       |counter_h            |   196|
-|10    |  nolabel_line71       |counter_amb          |     3|
-|11    |  nolabel_line75       |pulse_generator      |    44|
-|12    |  nolabel_line76       |stoplight_state_mgmt |    34|
-|13    |  nolabel_line77       |cross_v              |    11|
-|14    |  nolabel_line78       |cross_h              |    12|
-|15    |  vertical_debouncer   |debouncer_2          |    35|
-|16    |  vertical_pulse       |edge_detector_3      |     1|
-+------+-----------------------+---------------------+------+
++------+-----------------+---------------------+------+
+|      |Instance         |Module               |Cells |
++------+-----------------+---------------------+------+
+|1     |top              |                     |  1295|
+|2     |  nolabel_line41 |pulse_generator      |    43|
+|3     |  nolabel_line43 |debouncer            |    35|
+|4     |  nolabel_line44 |edge_detector        |     1|
+|5     |  nolabel_line45 |debouncer_0          |    35|
+|6     |  nolabel_line46 |edge_detector_1      |     1|
+|7     |  nolabel_line47 |debouncer_2          |    36|
+|8     |  nolabel_line48 |edge_detector_3      |     3|
+|9     |  nolabel_line50 |stoplight_state_mgmt |    31|
+|10    |  nolabel_line52 |cross_v              |    14|
+|11    |  nolabel_line53 |cross_h              |    10|
+|12    |  nolabel_line55 |counter_h            |   199|
+|13    |  nolabel_line56 |counter_v            |   117|
+|14    |  nolabel_line57 |counter_amb          |     3|
+|15    |  nolabel_line63 |cross_led_mgmt       |    17|
+|16    |  nolabel_line65 |seven_seg_mgmt       |    40|
++------+-----------------+---------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 773.246 ; gain = 514.984
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 774.063 ; gain = 515.465
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 773.246 ; gain = 180.172
-Synthesis Optimization Complete : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 773.246 ; gain = 514.984
+Synthesis finished with 0 errors, 0 critical warnings and 21 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 774.063 ; gain = 179.941
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:34 . Memory (MB): peak = 774.063 ; gain = 515.465
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 184 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 178 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 6 instances were transformed.
-  LD => LDCE: 3 instances
-  LDC => LDCE: 1 instances
-  LDCP => LDCP (GND, LUT3, LUT3, LDCE, VCC): 2 instances
+No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-45 Infos, 13 Warnings, 0 Critical Warnings and 0 Errors encountered.
+46 Infos, 59 Warnings, 16 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 773.246 ; gain = 527.992
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 774.063 ; gain = 528.613
 WARNING: [Constraints 18-5210] No constraint will be written out.
-INFO: [Common 17-1381] The checkpoint 'D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/lab3.runs/synth_1/main.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/jlarr/Desktop/lab-digitales/exp3/lab3.runs/synth_1/main.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file main_utilization_synth.rpt -pb main_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 773.246 ; gain = 0.000
-INFO: [Common 17-206] Exiting Vivado at Wed Sep 19 16:36:50 2018...
+report_utilization: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 774.063 ; gain = 0.000
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 20 13:26:09 2018...
