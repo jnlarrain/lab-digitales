@@ -3,6 +3,7 @@
 module stoplight_state_mgmt(
     input clk,
     input pulse,
+    input en,
     input amb_pulse,
     input high_flow,
     output [1:0] state_v,
@@ -25,7 +26,7 @@ module stoplight_state_mgmt(
                    : 2;     
     
     always @ (posedge clk)
-        if (amb_pulse)
+        if (amb_pulse && en)
             begin
             if (state == 0)
                 begin
@@ -48,7 +49,7 @@ module stoplight_state_mgmt(
                 counter = 0;
                 end
             end
-        else if (pulse)
+        else if (pulse && en)
             if (counter >= counter_max)
                 begin
                 if (state == 5)
