@@ -1,0 +1,78 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
+| Date         : Thu Sep 20 13:26:58 2018
+| Host         : DESKTOP-KQ9AKKV running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file main_control_sets_placed.rpt
+| Design       : main
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Number of unique control sets                            |    11 |
+| Unused register locations in slices containing registers |    28 |
++----------------------------------------------------------+-------+
+
+
+2. Histogram
+------------
+
++--------+--------------+
+| Fanout | Control Sets |
++--------+--------------+
+|      8 |            2 |
+|     12 |            1 |
+|     14 |            2 |
+|    16+ |            6 |
++--------+--------------+
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              54 |           15 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              82 |           11 |
+| Yes          | No                    | No                     |              28 |            6 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             160 |           25 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------+-----------------------------------------------+-----------------------------------------------+------------------+----------------+
+|  Clock Signal  |                 Enable Signal                 |                Set/Reset Signal               | Slice Load Count | Bel Load Count |
++----------------+-----------------------------------------------+-----------------------------------------------+------------------+----------------+
+|  clk_IBUF_BUFG | nolabel_line41/E[0]                           | nolabel_line52/cross_countdown                |                1 |              8 |
+|  clk_IBUF_BUFG | nolabel_line41/E[0]                           | nolabel_line53/cross_countdown[3]_i_1__0_n_0  |                1 |              8 |
+|  clk_IBUF_BUFG | nolabel_line48/E[0]                           | nolabel_line50/counter[5]_i_1_n_0             |                2 |             12 |
+|  clk_IBUF_BUFG | nolabel_line55/cuenta[6]_i_1__0_n_0           |                                               |                3 |             14 |
+|  clk_IBUF_BUFG | nolabel_line56/cuenta[6]_i_1_n_0              |                                               |                3 |             14 |
+|  clk_IBUF_BUFG |                                               | nolabel_line65/clear                          |                5 |             34 |
+|  clk_IBUF_BUFG | nolabel_line43/delay_count_reg[21]_i_2_n_0    | nolabel_line43/delay_count_reg[21]_i_1_n_0    |                7 |             44 |
+|  clk_IBUF_BUFG | nolabel_line45/delay_count_reg[21]_i_2__0_n_0 | nolabel_line45/delay_count_reg[21]_i_1__0_n_0 |                7 |             44 |
+|  clk_IBUF_BUFG | nolabel_line47/delay_count_reg[21]_i_2__1_n_0 | nolabel_line47/delay_count_reg[21]_i_1__1_n_0 |                7 |             44 |
+|  clk_IBUF_BUFG |                                               | nolabel_line41/clear                          |                6 |             48 |
+|  clk_IBUF_BUFG |                                               |                                               |               15 |             54 |
++----------------+-----------------------------------------------+-----------------------------------------------+------------------+----------------+
+
+
