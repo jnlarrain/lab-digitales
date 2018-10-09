@@ -8,7 +8,7 @@ module main(
     );
     
   wire [2:0]num;
-  assign num = sw[2:0];
+  assign num = sw[2:0];         // solo para degubear el display
   
   display_floor(clk, num, num, an, seg);
     

@@ -148,3 +148,508 @@ Resolution:
 1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
 2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
 For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+export_ip_user_files -of_objects  [get_files {{D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v}}] -no_script -reset -force -quiet
+remove_files  {{D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v}}
+export_ip_user_files -of_objects  [get_files {{D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/counter_h.v}}] -no_script -reset -force -quiet
+remove_files  {{D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/counter_h.v}}
+export_ip_user_files -of_objects  [get_files {{D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/cross_h.v}}] -no_script -reset -force -quiet
+remove_files  {{D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/cross_h.v}}
+export_ip_user_files -of_objects  [get_files {{D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v}}] -no_script -reset -force -quiet
+remove_files  {{D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v}}
+add_files -norecurse {{D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v}}
+close [ open {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/door_led_mgmt.v} w ]
+add_files {{D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/door_led_mgmt.v}}
+close [ open {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/move_elevator.v} w ]
+add_files {{D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/move_elevator.v}}
+close [ open {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_state.v} w ]
+add_files {{D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_state.v}}
+close [ open {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/reset_pos.v} w ]
+add_files {{D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/reset_pos.v}}
+close [ open {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/distance_calculator.v} w ]
+add_files {{D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/distance_calculator.v}}
+close [ open {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_press_detector.v} w ]
+add_files {{D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_press_detector.v}}
+update_compile_order -fileset sources_1
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+INFO: [Common 17-14] Message 'filemgmt 56-199' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183736200A
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183736200A
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+INFO: [Common 17-14] Message 'Common 17-180' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+INFO: [Common 17-14] Message 'filemgmt 56-199' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/reset_pos.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_state.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/distance_calculator.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/move_elevator.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_press_detector.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/reset_pos.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_state.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/distance_calculator.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/move_elevator.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_press_detector.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/reset_pos.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_state.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/distance_calculator.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/move_elevator.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_press_detector.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/reset_pos.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_state.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/distance_calculator.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/move_elevator.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_press_detector.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/reset_pos.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_state.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/distance_calculator.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/move_elevator.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_press_detector.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/reset_pos.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_state.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/distance_calculator.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/move_elevator.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_press_detector.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/reset_pos.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_state.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/distance_calculator.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/move_elevator.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_press_detector.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/reset_pos.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_state.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/distance_calculator.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/move_elevator.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_press_detector.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/reset_pos.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_state.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/distance_calculator.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/move_elevator.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_press_detector.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/reset_pos.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_state.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/distance_calculator.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/move_elevator.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_press_detector.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/reset_pos.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/logic_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_state.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/distance_calculator.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/move_elevator.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/stoplight_state_mgmt.v:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/button_press_detector.v:]
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v:]
+INFO: [Common 17-14] Message 'filemgmt 56-199' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
+ERROR: [Common 17-180] Spawn failed: No such file or directory
