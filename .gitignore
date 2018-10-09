@@ -1,2 +1,7 @@
 
 #poner los archivos que molestan
+
+
+*.xml
+*.jou
+*.log
