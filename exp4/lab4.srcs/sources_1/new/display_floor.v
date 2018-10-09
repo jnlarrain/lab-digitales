@@ -1,15 +1,12 @@
 `timescale 1ns / 1ps
 /*
-qty_1 y qty_2 dos son variables de 7 bits. 
-El número decimal de cada variable será mostrado en los displays de siete segmentos. 
-Se debe tomar en cuenta la presencia de un ambulancia en la calle vertical.
+
+
 */
-module seven_seg_mgmt(
+module display_floor(
     input clk,
-    input en,               // enable
     input [6:0] qty_1,      // quantity 1
     input [6:0] qty_2,      // quantity 2
-    input qty_amb,          // quantity 
     output [3:0] s_an,      // selector segments
     output [6:0] s_seg      // segments
     );
@@ -19,18 +16,9 @@ module seven_seg_mgmt(
     reg [16:0] clock_divide_counter;
     wire [3:0] number;
     wire [6:0] segmentos [15:0];
-    wire [3:0] dec1;
-    wire [3:0] dec2;
-    wire [3:0] uni1;
-    wire [3:0] uni2;
-
-
-    assign uni1 = (qty_1+qty_amb)%10;
-    assign uni2 = qty_2%10;
-    assign dec1 = (qty_1+qty_amb - uni1)/10;
-    assign dec2 = (qty_2 - uni2)/10;
-    assign s_an = en ? (display[1] ? (display[0] ? 4'b1011 : 4'b0111) : (display[0] ? 4'b1110 : 4'b1101)) : 4'b0000;
-    assign number = display[1] ? (display[0] ? uni1 : dec1) : (display[0] ? uni2 : dec2);
+    
+    assign s_an = display[1] ? (display[0] ? 4'b1011 : 4'b0111) : (display[0] ? 4'b1110 : 4'b1101);
+    //assign number = display[1] ? (display[0] ? uni1 : dec1) : (display[0] ? uni2 : dec2);
     
     assign {segmentos[0],
             segmentos[1],
@@ -64,7 +52,7 @@ module seven_seg_mgmt(
                               7'b0000110,
                               7'b0001110};
         
-    assign s_seg = en ? segmentos[number] : 7'b1111111;
+    assign s_seg = segmentos[number];
 
     always @ (posedge clk)
     begin
