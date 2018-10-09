@@ -2,10 +2,10 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Wed Sep 26 22:49:19 2018
-# Process ID: 8004
+# Start of session at: Tue Oct  9 16:49:29 2018
+# Process ID: 3056
 # Current directory: D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17692 D:\University\Engineering\8th semester\Digital Lab\lab-digitales\exp3\lab3.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16476 D:\University\Engineering\8th semester\Digital Lab\lab-digitales\exp3\lab3.xpr
 # Log file: D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3/vivado.log
 # Journal file: D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp3\vivado.jou
 #-----------------------------------------------------------
@@ -18,7 +18,7 @@ WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'D:/Univer
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programs/Xilinx/Vivado/2018.2/data/ip'.
-open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:06 . Memory (MB): peak = 909.387 ; gain = 175.305
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 884.809 ; gain = 150.238
 update_compile_order -fileset sources_1
 exit
-INFO: [Common 17-206] Exiting Vivado at Thu Sep 27 03:06:24 2018...
+INFO: [Common 17-206] Exiting Vivado at Tue Oct  9 17:08:31 2018...

@@ -2,17 +2,15 @@
 
 module main(
     input clk,
-    input btnC,
-    input btnD,
-    input btnR,
     input [15:0] sw,
-    output [15:0] led,
     output [6:0] seg,
-    output [3:0] an,
-    output [7:0] JA
+    output [3:0] an
     );
     
+  wire [2:0]num;
+  assign num = sw[2:0];
   
+  display_floor(clk, num, num, an, seg);
     
 
 
