@@ -30,7 +30,8 @@ set_property target_language Verilog [current_project]
 set_property ip_output_repo {d:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/display_floor.v}
+  {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/debug_seven_segment.v}
+  {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/distance_calculator.v}
   {D:/University/Engineering/8th semester/Digital Lab/lab-digitales/exp4/lab4.srcs/sources_1/new/main_2.v}
 }
 # Mark all dcp files as not used in implementation to prevent them from being
