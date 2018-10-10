@@ -1,12 +1,12 @@
 `timescale 1ns / 1ps
 
-module pulse_generator(
+module pulse_generator_keypad(
     input clk,
     output pulse
     ); 
-    reg [28:0] counter;
+    reg [23:0] counter;
     
-    parameter max_count = 300000000;
+    parameter max_count = 100000;
     
     always @ (posedge clk)
         if (counter >= max_count)
