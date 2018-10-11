@@ -51,6 +51,9 @@ module main_ale(
     // 1 si la puerta esta abierta.
     wire door_led_1;
     wire door_led_2;
+    // Pulso que indica que se debe abrir una puerta. Se emite cuando el ascensor para.
+    wire open_pulse_1;
+    wire open_pulse_2;
     // Se emite un pulso cuando la puerta se cierra.
     wire close_pulse_1;
     wire close_pulse_2;
@@ -71,9 +74,12 @@ module main_ale(
     move_elevator #(2)(clk, pulse_fast, set_1, pos_1, static_1, dir_1);
     move_elevator #(6)(clk, pulse_fast, set_2, pos_2, static_2, dir_2);
     
+    // Emite un pulso cuando el ascensor para.
+    edge_detector(clk, static_1, open_pulse_1);
+    edge_detector(clk, static_2, open_pulse_2);
     // Este close_pulse le avisa al logic_mgmt que ya se cerro la puerta. Es un pulso.
-    door_led_mgmt(clk, 0, door_led_1, close_pulse_1);
-    door_led_mgmt(clk, 0, door_led_2, close_pulse_2);
+    door_led_mgmt(clk, open_pulse_1, door_led_1, close_pulse_1);
+    door_led_mgmt(clk, open_pulse_2, door_led_2, close_pulse_2);
     
     // Leds para mostrar info.
     assign led[0] = dir_1;
