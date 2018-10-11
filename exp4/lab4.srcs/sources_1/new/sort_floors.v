@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module sort_flors(  
+module sort_floor(  
     input   clk,
     input   [3:0]d0,
     input   [3:0]d1,

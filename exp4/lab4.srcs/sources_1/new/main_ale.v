@@ -101,12 +101,12 @@ module main_ale(
     assign aux_2 = sw[5:3];
     assign aux_3 = sw[11:6];
     
-    assign reset_aux = {3'b00, reset};
+    assign reset_aux = {reset,3'b00};
     
     //logic_mgmt(clk, pos_1, pos_2, static_1, static_2, dir_1, dir_2, reset, door_led_1, door_led_2, floor_state, el_state_1, el_state_2, set_1, set_2);
     logic_mgmt(clk, aux_1, aux_2, 0, 0, dir_1, dir_2, reset, door_led_1, door_led_2, aux_3, el_state_1, el_state_2, set_1, set_2);
     //display_floor(clk, pos_1, pos_2, an, seg);
-    display_floor(clk, 0, reset_aux, an, seg);
+    display_floor(clk, set_1, reset_aux, an, seg);
     reset_pos(clk, btnU, pos_1, pos_2, reset);
     
     

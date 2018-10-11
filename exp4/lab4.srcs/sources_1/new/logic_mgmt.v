@@ -119,15 +119,15 @@ module logic_mgmt(
 
  
     
-    sort_flors(clk, f10, f11, f12, f13, f14, f15, re_1);
-    sort_flors(clk, f20, f21, f22, f23, f24, f25, re_1);
+    sort_floor(clk, f10, f11, f12, f13, f14, f15, re_1);
+    sort_floor(clk, f20, f21, f22, f23, f24, f25, re_1);
     
     always @(posedge clk)
     begin
     if (~flag1)
-    set_elevator_1 = reset ? 3'b110 : (floor_state==set_elevator_1==set_elevator_2==0 ? 3'b110 : re_1 );
+    set_elevator_1 = reset ? 3'b110 : (floor_state==el_state_1==el_state_2==0 ? 3'b110 : re_1 );
     if (~flag2)
-    set_elevator_2 = reset ? 3'b010 : (floor_state==set_elevator_1==set_elevator_2==0 ? 3'b010 : re_2 );    
+    set_elevator_2 = reset ? 3'b010 : (floor_state==el_state_1==el_state_2==0 ? 3'b010 : re_2 );    
     end
 endmodule
 

@@ -15,7 +15,7 @@ module reset_pos(
     reset_state = 1;
     else
     begin
-    if ((pos_1 == 2)&&(pos_2 == 6))
+    if ((pos_1 == 6)&&(pos_2 == 6))
     reset_state = 0;
     end
         
