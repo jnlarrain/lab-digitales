@@ -120,7 +120,7 @@ module logic_mgmt(
  
     
     sort_floor(clk, f10, f11, f12, f13, f14, f15, re_1);
-    sort_floor(clk, f20, f21, f22, f23, f24, f25, re_1);
+    sort_floor(clk, f20, f21, f22, f23, f24, f25, re_2);
     
     always @(posedge clk)
     begin

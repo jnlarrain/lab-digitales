@@ -3,7 +3,6 @@
 module main_ale(
     input clk,
     input [3:0] JC,
-    input btnU,
     input [15:0]sw,
     output [3:0] JB,
     output [15:0] led,
@@ -103,7 +102,8 @@ module main_ale(
     
     
     
-    assign reset_aux = {reset,3'b00};
+    assign reset_aux[2] = reset;
+    assign reset_aux[1:0] = 2'b00;
     // debug
     
     
@@ -111,7 +111,7 @@ module main_ale(
     logic_mgmt(clk, aux_1, aux_2, 0, 0, dir_1, dir_2, reset, door_led_1, door_led_2, aux_3, el_state_1, el_state_2, set_1, set_2);//debug
     //display_floor(clk, pos_1, pos_2, an, seg);
     display_floor(clk, set_1, reset_aux, an, seg);//debug
-    reset_pos(clk, btnU, pos_1, pos_2, reset);
+    reset_pos(clk, sw[15], pos_1, pos_2, reset);
     
     
 endmodule
