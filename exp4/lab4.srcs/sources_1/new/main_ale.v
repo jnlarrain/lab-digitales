@@ -3,6 +3,7 @@
 module main_ale(
     input clk,
     input [3:0] JC,
+    input btnU,
     output [3:0] JB,
     output [15:0] led,
     output [6:0] seg,
@@ -86,5 +87,12 @@ module main_ale(
     assign led[1] = dir_2;
     assign led[2] = door_led_1;
     assign led[3] = door_led_2;
+    wire reset;
+    
+    
+    logic_mgmt(clk, pos_1, pos_2, static_1, static_2, dir_1, dir_2, reset, door_led_1, door_led_2, floor_state, el_state_1, el_state_2, set_1, set_2);
+    display_floor(clk, pos_1, pos_2, an, seg);
+    reset_pos(clk, btnU, pos_1, pos_2, reset);
+    
     
 endmodule
