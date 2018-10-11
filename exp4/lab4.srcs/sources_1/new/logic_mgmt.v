@@ -45,8 +45,6 @@ module logic_mgmt(
     output reg [2:0]set_elevator_2              // señal subida elevador 2
     );
         
-    wire [2:0]reset_elevator_1;
-    wire [2:0]reset_elevator_2;
     
     //wires para las distancias
     wire [3:0]f10;
@@ -84,8 +82,6 @@ module logic_mgmt(
     wire [2:0]re_1;
     wire [2:0]re_2;   
     
-    assign reset_elevator_1 = 6;            //pos = 2 f1 f2
-    assign reset_elevator_2 = 2;            //pos = 6 f5
     
     assign up11 = set_elevator_1[1]&((pos_1>3)&dir_1);    
     assign up12 = set_elevator_1[2]&((pos_1>5)&dir_1);

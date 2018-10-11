@@ -4,11 +4,13 @@ module main_ale(
     input clk,
     input [3:0] JC,
     input btnU,
+    input [15:0]sw,
     output [3:0] JB,
     output [15:0] led,
     output [6:0] seg,
     output [3:0] an
     );
+    
     
     // Este pulso se usa en door_led_mgmt y en logic_mgmt.
     wire pulse_slow;
@@ -90,8 +92,21 @@ module main_ale(
     wire reset;
     
     
-    logic_mgmt(clk, pos_1, pos_2, static_1, static_2, dir_1, dir_2, reset, door_led_1, door_led_2, floor_state, el_state_1, el_state_2, set_1, set_2);
-    display_floor(clk, pos_1, pos_2, an, seg);
+    wire [2:0]aux_1;
+    wire [2:0]aux_2;
+    wire [5:0]aux_3;
+    wire [2:0]reset_aux;
+    
+    assign aux_1 = sw[2:0];
+    assign aux_2 = sw[5:3];
+    assign aux_3 = sw[11:6];
+    
+    assign reset_aux = {3'b00, reset};
+    
+    //logic_mgmt(clk, pos_1, pos_2, static_1, static_2, dir_1, dir_2, reset, door_led_1, door_led_2, floor_state, el_state_1, el_state_2, set_1, set_2);
+    logic_mgmt(clk, aux_1, aux_2, 0, 0, dir_1, dir_2, reset, door_led_1, door_led_2, aux_3, el_state_1, el_state_2, set_1, set_2);
+    //display_floor(clk, pos_1, pos_2, an, seg);
+    display_floor(clk, 0, reset_aux, an, seg);
     reset_pos(clk, btnU, pos_1, pos_2, reset);
     
     
