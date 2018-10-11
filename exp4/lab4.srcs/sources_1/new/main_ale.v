@@ -49,9 +49,11 @@ module main_ale(
     wire [3:0] el_pull_2;
     
     // 1 si la puerta esta abierta.
-    wire door_led;
+    wire door_led_1;
+    wire door_led_2;
     // Se emite un pulso cuando la puerta se cierra.
-    wire close_pulse;
+    wire close_pulse_1;
+    wire close_pulse_2;
     // FALTA IMPLEMENTAR QUE SE ABRA LA PUERTA
     
     // Generadores de pulsos.
@@ -70,11 +72,13 @@ module main_ale(
     move_elevator #(6)(clk, pulse_fast, set_2, pos_2, static_2, dir_2);
     
     // Este close_pulse le avisa al logic_mgmt que ya se cerro la puerta. Es un pulso.
-    door_led_mgmt(clk, 0, door_led, close_pulse);
+    door_led_mgmt(clk, 0, door_led_1, close_pulse_1);
+    door_led_mgmt(clk, 0, door_led_2, close_pulse_2);
     
     // Leds para mostrar info.
     assign led[0] = dir_1;
     assign led[1] = dir_2;
-    assign led[2] = door_led;
+    assign led[2] = door_led_1;
+    assign led[3] = door_led_2;
     
 endmodule
