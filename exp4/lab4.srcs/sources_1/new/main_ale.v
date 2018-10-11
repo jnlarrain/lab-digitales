@@ -11,6 +11,8 @@ module main_ale(
     );
     
     
+    //señal de reset
+    wire reset;
     // Este pulso se usa en door_led_mgmt y en logic_mgmt.
     wire pulse_slow;
     // Este pulso se usa para el movimiento del ascensor. Su periodo es 1.5 segundos.
@@ -88,7 +90,8 @@ module main_ale(
     assign led[1] = dir_2;
     assign led[2] = door_led_1;
     assign led[3] = door_led_2;
-    wire reset;
+    assign led[15] = reset;
+    
     
     // debug
     wire [2:0]aux_1;
@@ -107,10 +110,10 @@ module main_ale(
     // debug
     
     
-    //logic_mgmt(clk, pos_1, pos_2, static_1, static_2, dir_1, dir_2, reset, door_led_1, door_led_2, floor_state, el_state_1, el_state_2, set_1, set_2);
-    logic_mgmt(clk, aux_1, aux_2, 0, 0, dir_1, dir_2, reset, door_led_1, door_led_2, aux_3, el_state_1, el_state_2, set_1, set_2);//debug
-    //display_floor(clk, pos_1, pos_2, an, seg);
-    display_floor(clk, set_1, reset_aux, an, seg);//debug
+    logic_mgmt(clk, pos_1, pos_2, static_1, static_2, dir_1, dir_2, reset, door_led_1, door_led_2, floor_state, el_state_1, el_state_2, set_1, set_2);
+    //logic_mgmt(clk, aux_1, aux_2, 0, 0, dir_1, dir_2, reset, door_led_1, door_led_2, aux_3, el_state_1, el_state_2, set_1, set_2);//debug
+    display_floor(clk, pos_1, pos_2, an, seg);
+//    display_floor(clk, set_1, set_2, an, seg);//debug
     reset_pos(clk, sw[15], pos_1, pos_2, reset);
     
     
