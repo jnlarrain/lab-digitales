@@ -12,10 +12,12 @@ module reset_pos(
     
     always @(posedge clk)
     if(s_sw)
+    begin
     reset_state = 1;
+    end
     else
     begin
-    if ((pos_1 == 6)&&(pos_2 == 6))
+    if ((pos_1 == 3'b110)&&(pos_2 == 3'b010))
     reset_state = 0;
     end
         
