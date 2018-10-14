@@ -1,5 +1,6 @@
 module move_elevator(
     input clk,
+    input reset,
     input pulse,
     input [2:0] set,
     output reg [2:0] pos,
@@ -46,6 +47,12 @@ module move_elevator(
             begin
                 static = 1;
             end
+        end
+        
+        if (reset)
+        begin
+            pos = pos_init;
+            static = 1;
         end
     end
     

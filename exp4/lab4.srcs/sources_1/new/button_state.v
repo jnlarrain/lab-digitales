@@ -1,5 +1,6 @@
 module button_state(
     input clk,
+    input reset,
     input [5:0] floor_press,
     input [3:0] el_press_1,
     input [3:0] el_press_2,
@@ -29,6 +30,7 @@ module button_state(
         end
         else
         begin
+       
     //        if (floor_press[0])
     //            floor_state[0] = 1;
     //        else if (floor_press[1])
@@ -40,6 +42,13 @@ module button_state(
             floor_state = floor_state & ~floor_pull;
             el_state_1 = el_state_1 & ~el_pull_1;
             el_state_2 = el_state_2 & ~el_pull_2;
+            
+            if (reset)
+            begin
+                floor_state = 0;
+                el_state_1 = 0;
+                el_state_2 = 0;
+            end
         end
     end
     

@@ -4,6 +4,7 @@ module main_ale_2(
     input clk,
     input [3:0] JC,
     input [15:0] sw,
+    input btnC,
     output [3:0] JB,
     output [3:0] JA,
     output [15:0] led,
@@ -69,19 +70,23 @@ module main_ale_2(
     // Modulos relacionados al keypad y el estado de los pedidos.
     keypad(clk, pulse_keypad, JC[3:0], JB[3:0], btns[15:0]);
     button_press_detector(clk, btns, floor_press, el_press_2, el_press_1);
-    button_state(clk, floor_press, el_press_1, el_press_2, floor_pull, el_pull_1, el_pull_2, floor_state, el_state_1, el_state_2);
+    button_state(clk, reset_signal, floor_press, el_press_1, el_press_2, floor_pull, el_pull_1, el_pull_2, floor_state, el_state_1, el_state_2);
     button_puller(clk, pos_1, pos_2, static_1, static_2, floor_pull, el_pull_1, el_pull_2);
     
     // Modulos para mover ascensores
-    move_elevator #(2)(clk, pulse_fast, set_1, pos_1, static_1, dir_1);
-    move_elevator #(6)(clk, pulse_fast, set_2, pos_2, static_2, dir_2);
+    move_elevator #(2)(clk, reset_signal, pulse_fast, set_1, pos_1, static_1, dir_1);
+    move_elevator #(6)(clk, reset_signal, pulse_fast, set_2, pos_2, static_2, dir_2);
+    
+    wire new_open_pulse_1;
+    wire new_open_pulse_2;
+    door_opener(clk, pos_1, pos_2, floor_press, el_press_1, el_press_2, new_open_pulse_1, new_open_pulse_2);
     
     // Emite un pulso cuando el ascensor para.
     edge_detector(clk, static_1, open_pulse_1);
     edge_detector(clk, static_2, open_pulse_2);
     // Este close_pulse le avisa al logic_mgmt que ya se cerro la puerta. Es un pulso.
-    door_led_mgmt(clk, open_pulse_1, door_led_1, close_pulse_1);
-    door_led_mgmt(clk, open_pulse_2, door_led_2, close_pulse_2);
+    door_led_mgmt(clk, open_pulse_1|new_open_pulse_1, door_led_1, close_pulse_1);
+    door_led_mgmt(clk, open_pulse_2|new_open_pulse_2, door_led_2, close_pulse_2);
     
     // Leds para mostrar info.
 //    assign led[0] = dir_1;
@@ -111,6 +116,9 @@ module main_ale_2(
     
     assign JA[2] = static_2 ? 0 : dir_2;
     assign JA[3] = static_2 ? 0 : ~dir_2;
+    
+    wire reset_signal;
+    edge_detector(clk, btnC, reset_signal);
        
     
     

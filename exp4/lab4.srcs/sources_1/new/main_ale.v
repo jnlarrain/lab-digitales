@@ -73,7 +73,7 @@ module main_ale(
     button_press_detector(clk, btns, floor_press, el_press_1, el_press_2);
     button_state(clk, floor_press, el_press_1, el_press_2, floor_pull, el_pull_1, el_pull_2, floor_state, el_state_1, el_state_2);
     button_puller(clk, pos_1, pos_2, static_1, static_2, floor_pull, el_pull_1, el_pull_2);
-    
+  
     // Modulos para mover ascensores
     move_elevator #(2)(clk, pulse_fast, set_1, pos_1, static_1, dir_1);
     move_elevator #(6)(clk, pulse_fast, set_2, pos_2, static_2, dir_2);
@@ -86,11 +86,11 @@ module main_ale(
     door_led_mgmt(clk, open_pulse_2, door_led_2, close_pulse_2);
     
     // Leds para mostrar info.
-    assign led[0] = dir_1;
-    assign led[1] = dir_2;
-    assign led[2] = door_led_1;
-    assign led[3] = door_led_2;
-    assign led[15] = reset;
+//    assign led[0] = dir_1;
+//    assign led[1] = dir_2;
+//    assign led[2] = door_led_1;
+//    assign led[3] = door_led_2;
+//    assign led[15] = reset;
     
     
     // debug
@@ -110,11 +110,15 @@ module main_ale(
     // debug
     
     
-//    logic_mgmt(clk, pos_1, pos_2, static_1, static_2, dir_1, dir_2, reset, door_led_1, door_led_2, floor_state, el_state_1, el_state_2, set_1, set_2);
-    logic_mgmt(clk, aux_1, aux_2, 0, 0, dir_1, dir_2, reset, door_led_1, door_led_2, aux_3, el_state_1, el_state_2, set_1, set_2);//debug
-//    display_floor(clk, pos_1, pos_2, an, seg);
-    display_floor(clk, set_1, set_2, an, seg);//debug
-    reset_pos(clk, sw[15], pos_1, pos_2, reset);
+    logic_mgmt(clk, pos_1, pos_2, static_1, static_2, dir_1, dir_2, reset, door_led_1, door_led_2, floor_state, el_state_1, el_state_2, set_1, set_2);
+//    logic_mgmt(clk, aux_1, aux_2, 0, 0, dir_1, dir_2, reset, door_led_1, door_led_2, aux_3, el_state_1, el_state_2, set_1, set_2);//debug
+    display_floor(clk, pos_1, pos_2, an, seg);
+//    display_floor(clk, set_1, set_2, an, seg);//debug
+    // reset_pos(clk, sw[15], pos_1, pos_2, reset);
+    assign led[3:0] = el_state_1;
+    assign led[7:4] = el_state_2;
+    assign led[13:8] = floor_state;
+    assign reset = 0;
     
     
 endmodule
