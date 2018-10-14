@@ -1,6 +1,17 @@
 `timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 10/13/2018 09:57:28 PM
+// Design Name: 
+// Module Name: main
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: `timescale 1ns / 1ps
 
-module main_ale_2(
+module main(
     input clk,
     input [3:0] JC,
     input [15:0] sw,
@@ -117,4 +128,18 @@ module main_ale_2(
     
     assign JA[2] = static_2 ? 0 : dir_2;
     assign JA[3] = static_2 ? 0 : ~dir_2;
+endmodule
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module main(
+
+    );
 endmodule
