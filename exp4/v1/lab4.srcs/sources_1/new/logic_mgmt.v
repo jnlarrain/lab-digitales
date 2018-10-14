@@ -125,9 +125,9 @@ module logic_mgmt(
     always @(posedge clk)
     begin
     if (~flag1)
-    set_elevator_1 = reset ? 3'b110 : (floor_state==el_state_1==el_state_2==0 ? 3'b110 : re_1 );
+    set_elevator_1 = reset ? 3'b110 : (floor_state==el_state_1==el_state_2==0 ? pos_1 : re_1 );
     if (~flag2)
-    set_elevator_2 = reset ? 3'b010 : (floor_state==el_state_1==el_state_2==0 ? 3'b010 : re_2 );    
+    set_elevator_2 = reset ? 3'b010 : (floor_state==el_state_1==el_state_2==0 ? pos_2 : re_2 );    
     end
 endmodule
 
