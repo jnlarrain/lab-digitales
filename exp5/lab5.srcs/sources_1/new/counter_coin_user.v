@@ -7,14 +7,17 @@ module counter_coin_user(
 input clk,
 input [3:0]inc,
 input [3:0]dec,
-output [9:0]count[3:0]
+output [9:0]cuenta0,
+output [9:0]cuenta1,
+output [9:0]cuenta2,
+output [9:0]cuenta3
 );
 
 reg [9:0]cuenta[3:0];   
-assign count[0] =  cuenta[0];
-assign count[1] =  cuenta[1];
-assign count[2] =  cuenta[2];
-assign count[3] =  cuenta[3];
+assign cuenta0 =  cuenta[0];
+assign cuenta1 =  cuenta[1];
+assign cuenta2 =  cuenta[2];
+assign cuenta3 =  cuenta[3];
 
 
 

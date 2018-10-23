@@ -1,20 +1,22 @@
 	`timescale 1ns / 1ps
 /*           
-8    El formato de los contadores de monedas es [500, 100, 50, 10].                        
-9    Partir con el config_mode y el incremento de la cantidad de monedas y productos.                        
+Cada producto se asigna al bit segun su indice            
 */
 module counter_products(
 input clk,
 input [3:0]inc,
 input [3:0]dec,
-output [13:0]count[3:0]
+output [13:0]product0,
+output [13:0]product1,
+output [13:0]product2,
+output [13:0]product3
 );
 
 reg [13:0]cuenta[3:0];   
-assign count[0] =  cuenta[0];
-assign count[1] =  cuenta[1];
-assign count[2] =  cuenta[2];
-assign count[3] =  cuenta[3];
+assign product0 =  cuenta[0];
+assign product1 =  cuenta[1];
+assign product2 =  cuenta[2];
+assign product3 =  cuenta[3];
 
 
 

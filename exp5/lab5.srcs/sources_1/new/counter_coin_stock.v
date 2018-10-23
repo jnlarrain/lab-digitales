@@ -8,14 +8,17 @@ module counter_coin_stock(
     input clk,
     input [3:0]inc,
     input [3:0]dec,
-    output [13:0]count[3:0]
-);
-
-reg [13:0]cuenta[3:0];   
-assign count[0] =  cuenta[0];
-assign count[1] =  cuenta[1];
-assign count[2] =  cuenta[2];
-assign count[3] =  cuenta[3];
+    output [13:0]quinientos,
+    output [13:0]cien,
+    output [13:0]cincuenta,
+    output [13:0]diez
+    );
+    
+    reg [13:0]cuenta[3:0];   
+    assign quinientos =  cuenta[0];
+    assign cien =  cuenta[1];
+    assign cincuenta =  cuenta[2];
+    assign diez =  cuenta[3];
 
 
 

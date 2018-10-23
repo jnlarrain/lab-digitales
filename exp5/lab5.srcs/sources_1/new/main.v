@@ -2,15 +2,17 @@
 
 
 module main(
-    input clk,
-    input [13:0] sw,
-    output [6:0] seg,
-    output [3:0] an
+    input   clk,
+    input   [13:0] sw,
+    input   btnU,
+    output  [6:0] seg,
+    output  [3:0] an
     );
     
-
+    wire [13:0]count;
     
-    seven_seg_mgmt(clk, 1, sw, an, seg);
+    counter_products(clk, btnU, 0, count);
+    seven_seg_mgmt(clk, 1, count, an, seg);
     
 
 endmodule
