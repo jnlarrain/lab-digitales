@@ -149,19 +149,19 @@ set_property PACKAGE_PIN U18 [get_ports btnC]
 
 
 
-##Pmod Header JB
-##Sch name = JB1
-#set_property PACKAGE_PIN A14 [get_ports {JB[0]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JB[0]}]
-##Sch name = JB2
-#set_property PACKAGE_PIN A16 [get_ports {JB[1]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JB[1]}]
-##Sch name = JB3
-#set_property PACKAGE_PIN B15 [get_ports {JB[2]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JB[2]}]
-##Sch name = JB4
-#set_property PACKAGE_PIN B16 [get_ports {JB[3]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JB[3]}]
+#Pmod Header JB
+#Sch name = JB1
+set_property PACKAGE_PIN A14 [get_ports {JB[0]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {JB[0]}]
+#Sch name = JB2
+set_property PACKAGE_PIN A16 [get_ports {JB[1]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {JB[1]}]
+#Sch name = JB3
+set_property PACKAGE_PIN B15 [get_ports {JB[2]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {JB[2]}]
+#Sch name = JB4
+set_property PACKAGE_PIN B16 [get_ports {JB[3]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {JB[3]}]
 ##Sch name = JB7
 #set_property PACKAGE_PIN A15 [get_ports {JB[4]}]					
 	#set_property IOSTANDARD LVCMOS33 [get_ports {JB[4]}]
@@ -179,17 +179,21 @@ set_property PACKAGE_PIN U18 [get_ports btnC]
 
 ##Pmod Header JC
 ##Sch name = JC1
-#set_property PACKAGE_PIN K17 [get_ports {JC[0]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JC[0]}]
-##Sch name = JC2
-#set_property PACKAGE_PIN M18 [get_ports {JC[1]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JC[1]}]
-##Sch name = JC3
-#set_property PACKAGE_PIN N17 [get_ports {JC[2]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JC[2]}]
-##Sch name = JC4
-#set_property PACKAGE_PIN P18 [get_ports {JC[3]}]					
-	#set_property IOSTANDARD LVCMOS33 [get_ports {JC[3]}]
+set_property PACKAGE_PIN K17 [get_ports {JC[0]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {JC[0]}]
+	set_property PULLUP true [get_ports {JC[0]}]
+#Sch name = JC2
+set_property PACKAGE_PIN M18 [get_ports {JC[1]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {JC[1]}]
+	set_property PULLUP true [get_ports {JC[1]}]
+#Sch name = JC3
+set_property PACKAGE_PIN N17 [get_ports {JC[2]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {JC[2]}]
+	set_property PULLUP true [get_ports {JC[2]}]
+#Sch name = JC4
+set_property PACKAGE_PIN P18 [get_ports {JC[3]}]					
+	set_property IOSTANDARD LVCMOS33 [get_ports {JC[3]}]
+	set_property PULLUP true [get_ports {JC[3]}]
 ##Sch name = JC7
 #set_property PACKAGE_PIN L17 [get_ports {JC[4]}]					
 	#set_property IOSTANDARD LVCMOS33 [get_ports {JC[4]}]
