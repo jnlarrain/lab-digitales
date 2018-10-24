@@ -20,6 +20,7 @@ module main_ale(
     wire [13:0] count_coins_stock_100;
     wire [13:0] count_coins_stock_50;
     wire [13:0] count_coins_stock_10;
+    
     wire [9:0] count_coins_user_500;
     wire [9:0] count_coins_user_100;
     wire [9:0] count_coins_user_50;
@@ -50,7 +51,6 @@ module main_ale(
     wire btn_cancel;
     
     assign config_mode = sw[15];
-    assign sale_done = sw[14]; // REMOVE BEFORE FLIGHT
     assign config_choice = sw[3:0];
     
     counter_receipts(clk, inc_receipts, count_receipts);
@@ -73,4 +73,11 @@ module main_ale(
     assign led[8:5] = btns_money;
     assign led[4:1] = btns_products;
     assign led[0] = btn_cancel;
+    
+    
+    // Remove before flight
+    assign sale_done = sw[14]; // REMOVE BEFORE FLIGHT
+    assign inc_coins_user =  btns_money;
+    assign inc_products = btns_products;
+    assign reset_coins_user = btn_cancel;
     endmodule
