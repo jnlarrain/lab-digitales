@@ -8,6 +8,11 @@ module counter_coin_stock(
     input clk,
     input [3:0]inc,
     input [3:0]dec,
+    input [13:0] count_coin_stock_500,
+    input [13:0] count_coin_stock_100,
+    input [13:0] count_coin_stock_50,
+    input [13:0] count_coin_stock_10,
+    input load,
     output [13:0]quinientos,
     output [13:0]cien,
     output [13:0]cincuenta,
@@ -17,7 +22,7 @@ module counter_coin_stock(
      
     
     reg [13:0]cuenta[3:0];   
-    assign quinientos =  cuenta[0];
+    assign quinientos = cuenta[0];
     assign cien =  cuenta[1];
     assign cincuenta =  cuenta[2];
     assign diez =  cuenta[3];
@@ -27,6 +32,8 @@ module counter_coin_stock(
     parameter c2 = 10;
     parameter c3 = 100;
     parameter c0 = 100;
+    
+    
 
     initial
     begin
@@ -59,6 +66,13 @@ else if(inc[2]|dec[2])
     else if (dec[2] &&(cuenta[2]>0))
         cuenta[2] = cuenta[2] - 1;
     end
+else if (load)
+begin
+cuenta[0] = count_coin_stock_500;
+cuenta[1] = count_coin_stock_100;
+cuenta[2] = count_coin_stock_50;
+cuenta[3] = count_coin_stock_10;
+end
 else
     begin
     if((cuenta[3] <9990) && inc[3])
