@@ -20,7 +20,7 @@ assign cuenta1 =  cuenta[1];
 assign cuenta2 =  cuenta[2];
 assign cuenta3 =  cuenta[3];
 
-assign valor = cuenta[0]*500 + cuenta[1]*100 +cuenta[2]*50 +cuenta[3]*10;
+assign valor = (cuenta[0]+inc[0])*500 + (cuenta[1]+inc[1])*100 + (cuenta[2]+inc[2])*50 +(cuenta[3]+inc[3])*10;
 
 always @(posedge clk)
 begin
