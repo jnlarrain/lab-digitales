@@ -26,22 +26,22 @@ always @(posedge clk)
 begin
 if(inc[0])
 begin
-if((valor <9990) && inc[0])
+if((valor <=9990) && inc[0])
     cuenta[0] = cuenta[0] + 1;
 end
 else if(inc[1])
 begin
-if((valor <9990) && inc[1])
+if((valor <=9990) && inc[1])
     cuenta[1] = cuenta[1] + 1;
 end
 else if(inc[2])
 begin
-if((valor <9990) && inc[2])
+if((valor <=9990) && inc[2])
     cuenta[2] = cuenta[2] + 1;
 end
 else if (inc[3])
 begin
-if((valor <9990) && inc[3])
+if((valor <=9990) && inc[3])
     cuenta[3] = cuenta[3] + 1;
 end
 else if(reset)
