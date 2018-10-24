@@ -14,6 +14,8 @@ module counter_coin_stock(
     output [13:0]diez
     );
     
+     
+    
     reg [13:0]cuenta[3:0];   
     assign quinientos =  cuenta[0];
     assign cien =  cuenta[1];
@@ -21,7 +23,19 @@ module counter_coin_stock(
     assign diez =  cuenta[3];
 
 
+    parameter c1 = 10;
+    parameter c2 = 10;
+    parameter c3 = 100;
+    parameter c0 = 100;
 
+    initial
+    begin
+    cuenta[0] = c0;
+    cuenta[1] = c1;
+    cuenta[2] = c2;
+    cuenta[3] = c3;
+    end
+    
 always @(posedge clk)
 begin
 if(inc[0]|dec[0])

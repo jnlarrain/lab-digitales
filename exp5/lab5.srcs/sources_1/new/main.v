@@ -10,8 +10,9 @@ module main(
     );
     
     wire [13:0]count;
-    
-    counter_products(clk, btnU, 0, count);
+    wire pulse;
+    pulse_generator(clk, pulse);
+    counter_products(clk, pulse, 0, count);
     seven_seg_mgmt(clk, 1, count, an, seg);
     
 

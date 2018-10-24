@@ -18,6 +18,18 @@ assign product1 =  cuenta[1];
 assign product2 =  cuenta[2];
 assign product3 =  cuenta[3];
 
+parameter c1 = 20;
+parameter c2 = 20;
+parameter c3 = 20;
+parameter c0 = 20;
+
+initial
+begin
+cuenta[0] = c0;
+cuenta[1] = c1;
+cuenta[2] = c2;
+cuenta[3] = c3;
+end
 
 
 always @(posedge clk)
