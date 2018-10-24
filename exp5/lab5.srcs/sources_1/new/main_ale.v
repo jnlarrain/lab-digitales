@@ -45,6 +45,10 @@ module main_ale(
     wire pulse_keypad;
     wire [15:0] btns_keypad;
     
+    wire [3:0] btns_money;
+    wire [3:0] btns_products;
+    wire btn_cancel;
+    
     assign config_mode = sw[15];
     assign sale_done = sw[14]; // REMOVE BEFORE FLIGHT
     assign config_choice = sw[3:0];
@@ -65,5 +69,8 @@ module main_ale(
     
     pulse_generator_keypad(clk, pulse_keypad);
     keypad(clk, pulse_keypad, JC, JB, btns_keypad);
-    assign led[15:0] = btns_keypad;
-endmodule
+    keypad_organizer(clk, btns_keypad, btns_money, btns_products, btn_cancel);
+    assign led[8:5] = btns_money;
+    assign led[4:1] = btns_products;
+    assign led[0] = btn_cancel;
+    endmodule
