@@ -43,8 +43,8 @@ module change_calculator(
     
     assign enough_change = count_coin_change_500 * 500 + count_coin_change_100 * 100 + count_coin_change_50 * 50 + count_coin_change_10 * 10 == change;
     
-    assign count_coin_stock_new_500 = count_coin_stock_500 + count_coin_user_500 - count_coin_change_500;
-    assign count_coin_stock_new_100 = count_coin_stock_100 + count_coin_user_100 - count_coin_change_100;
-    assign count_coin_stock_new_50 = count_coin_stock_50 + count_coin_user_50 - count_coin_change_50;
-    assign count_coin_stock_new_10 = count_coin_stock_10 + count_coin_user_10 - count_coin_change_10;
+    assign count_coin_stock_new_500 = enough_change ? count_coin_stock_500 + count_coin_user_500 - count_coin_change_500 : count_coin_stock_500;
+    assign count_coin_stock_new_100 = enough_change ? count_coin_stock_100 + count_coin_user_100 - count_coin_change_100 : count_coin_stock_100;
+    assign count_coin_stock_new_50 = enough_change ? count_coin_stock_50 + count_coin_user_50 - count_coin_change_50 : count_coin_stock_50;
+    assign count_coin_stock_new_10 = enough_change ? count_coin_stock_10 + count_coin_user_10 - count_coin_change_10 : count_coin_stock_10;
 endmodule

@@ -3,7 +3,8 @@ module keypad_organizer(
     input [15:0] btns,
     output [3:0] btns_money,
     output [3:0] btns_products,
-    output btn_cancel
+    output btn_cancel,
+    output btn_buy
     );
         
     wire btn_debounced_0;
@@ -77,5 +78,6 @@ module keypad_organizer(
     assign btns_money = {btn_edged_1, btn_edged_13, btn_edged_9, btn_edged_5};
     assign btns_products = {btn_edged_2, btn_edged_14, btn_edged_10, btn_edged_6};
     assign btn_cancel = btn_edged_3;
+    assign btn_buy = btn_edged_7;
     
 endmodule
