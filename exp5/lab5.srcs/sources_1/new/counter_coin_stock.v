@@ -18,7 +18,6 @@ module counter_coin_stock(
     output [13:0]cincuenta,
     output [13:0]diez
     );
-    
      
     
     reg [13:0]cuenta[3:0];   
@@ -28,10 +27,10 @@ module counter_coin_stock(
     assign diez =  cuenta[3];
 
 
-    parameter c0 = 100; // 500
-    parameter c1 = 10; // 100
+    parameter c0 = 8; // 500
+    parameter c1 = 9; // 100
     parameter c2 = 10; // 50
-    parameter c3 = 100; // 10
+    parameter c3 = 11; // 10
     
     
 
