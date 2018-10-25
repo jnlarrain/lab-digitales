@@ -18,10 +18,10 @@ assign product1 =  cuenta[1];
 assign product2 =  cuenta[2];
 assign product3 =  cuenta[3];
 
-parameter c0 = 20;
+parameter c0 = 0;
 parameter c1 = 0;
-parameter c2 = 2;
-parameter c3 = 4;
+parameter c2 = 0;
+parameter c3 = 0;
 
 initial
 begin

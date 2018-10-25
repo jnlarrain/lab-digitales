@@ -21,10 +21,10 @@ module main_ale(
     parameter count_product_initial_2 = 2;
     parameter count_product_initial_3 = 4;
     
-    parameter count_coin_initial_500 = 8;
-    parameter count_coin_initial_100 = 9;
-    parameter count_coin_initial_50 = 10;
-    parameter count_coin_initial_10 = 11;
+    parameter count_coin_initial_500 = 0;
+    parameter count_coin_initial_100 = 0;
+    parameter count_coin_initial_50 = 0;
+    parameter count_coin_initial_10 = 0;
     
     wire [13:0] count_receipts;
     wire [13:0] count_product_0;
@@ -52,7 +52,6 @@ module main_ale(
     wire [3:0] inc_coins_user;
     wire reset_coins_user;
     
-    wire load_coins_stock;
     wire [13:0] count_coins_stock_load_500;
     wire [13:0] count_coins_stock_load_100;
     wire [13:0] count_coins_stock_load_50;
@@ -63,12 +62,13 @@ module main_ale(
     
     wire sale_done_pulse;
     wire not_enough_funds_pulse;
+    wire not_enough_change_pulse;
     wire product_not_available_pulse;
         
     wire sale_done;
     wire not_enough_funds;
+    wire not_enough_change;
     wire product_not_available;
-    
     
     wire [13:0] display_num;
     
@@ -84,7 +84,7 @@ module main_ale(
         (clk, inc_products, dec_products, count_product_0, count_product_1, count_product_2, count_product_3);
     counter_coin_stock #(count_coin_initial_500, count_coin_initial_100, count_coin_initial_50, count_coin_initial_10)
         (clk, inc_coins_stock, dec_coins_stock,
-        count_coins_stock_load_500, count_coins_stock_load_100, count_coins_stock_load_50, count_coins_stock_load_10, load_coins_stock,
+        count_coins_stock_load_500, count_coins_stock_load_100, count_coins_stock_load_50, count_coins_stock_load_10, sale_done_pulse,
         count_coins_stock_500, count_coins_stock_100, count_coins_stock_50, count_coins_stock_10);
     counter_coin_user(clk, inc_coins_user, reset_coins_user, count_coins_user_500, count_coins_user_100, count_coins_user_50, count_coins_user_10);
     
@@ -109,7 +109,7 @@ module main_ale(
         count_coins_stock_500, count_coins_stock_100, count_coins_stock_50, count_coins_stock_10,
         count_coins_user_500, count_coins_user_100, count_coins_user_50, count_coins_user_10,
         count_product_0, count_product_1, count_product_2, count_product_3, btns_money, btns_products, btn_cancel,
-        sale_done_pulse, not_enough_funds_pulse, product_not_available_pulse, inc_coins_stock, load_coins_stock,
+        sale_done_pulse, not_enough_funds_pulse, not_enough_change_pulse, product_not_available_pulse, inc_coins_stock,
         count_coins_stock_load_500, count_coins_stock_load_100, count_coins_stock_load_50, count_coins_stock_load_10,
         inc_coins_user, reset_coins_user, inc_products, dec_products, change);
             
@@ -117,8 +117,8 @@ module main_ale(
     assign config_choice = sw[3:0];
     assign led[15] = sale_done;
     assign led[14] = not_enough_funds;
-    assign led[13] = product_not_available;
-    assign led[12] = product_not_available_pulse;
+    assign led[13] = not_enough_change;
+    assign led[12] = product_not_available;
     
     // Remove before flight
 //    assign sale_done = sw[14]; // REMOVE BEFORE FLIGHT
