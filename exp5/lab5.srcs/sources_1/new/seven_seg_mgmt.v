@@ -24,6 +24,8 @@ module seven_seg_mgmt(
     wire [13:0]aux3;
     wire [13:0]aux4;
     wire [13:0]aux0;
+    
+    wire [3:0] an_mask;
 
 
     assign aux0 = num%10;
@@ -38,8 +40,8 @@ module seven_seg_mgmt(
     assign cen = aux3%10;
     assign mil = aux4;
    
-    
-    assign s_an = en ? (display[1] ? (display[0] ? 4'b1011 : 4'b0111) : (display[0] ? 4'b1110 : 4'b1101)) : 4'b0000;
+    assign an_mask = num > 999 ? 4'b1111 : num > 99 ? 4'b0111 : num > 9 ? 4'b0011 : 4'b0001;
+    assign s_an = (en ? (display[1] ? (display[0] ? 4'b1011 : 4'b0111) : (display[0] ? 4'b1110 : 4'b1101)) : 4'b0000) | ~an_mask;
     assign number = display[1] ? (display[0] ? cen : mil ) : (display[0] ? uni : dec);
     
     assign {segmentos[0],
