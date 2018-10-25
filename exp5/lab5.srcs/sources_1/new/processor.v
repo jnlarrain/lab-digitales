@@ -40,7 +40,7 @@ module processor(
     input btn_cancel,
     output sale_done_pulse,
     output not_enough_funds_pulse,
-    output product_not_available_pulse,
+    output reg product_not_available_pulse,
     output [3:0] coin_stock_inc,
     output coin_stock_load,
     output [13:0] coin_stock_load_500,
@@ -54,20 +54,64 @@ module processor(
     output [13:0] change
     );
     
+    parameter price_0 = 50;
+    parameter price_1 = 100;
+    parameter price_2 = 990;
+    parameter price_3 = 5000;
+    
+    reg [13:0] count_product;
+    reg [13:0] price_product;
+    
+    reg [1:0] product_num;
+    
     always @ (posedge clk)
     begin
-        if (config_mode)
-        begin
-        
-        end
-        else
-        begin
-        
+        product_not_available_pulse = 0;
+        count_product = 0;
+        price_product = 0;
+        if (~config_mode)
+            begin
+            if (btns_product)
+            begin
+                if (btns_product[0])
+                begin
+                    product_num = 0;
+                    count_product = count_product_0;
+                    price_product = price_0;
+                end
+                if (btns_product[1])
+                begin
+                    product_num = 1;
+                    count_product = count_product_1;
+                    price_product = price_1;
+                end
+                if (btns_product[2])
+                begin
+                    product_num = 2;
+                    count_product = count_product_2;
+                    price_product = price_2;
+                end
+                if (btns_product[3])
+                begin
+                    product_num = 3;
+                    count_product = count_product_3;
+                    price_product = price_3;
+                end
+                
+                if (count_product)
+                begin
+                    // SIGUE AQUI
+                end
+                else
+                begin
+                    product_not_available_pulse = 1;
+                end
+            end
         end
     end
     
-    assign coin_stock_inc = btns_money & config_mode;
-    assign products_inc = btns_product & config_mode;
-    assign coin_user_inc = btns_money & ~config_mode;
-    assign coin_user_reset = btn_cancel & ~config_mode;
+    assign coin_stock_inc = config_mode ? btns_money : 0;
+    assign products_inc = config_mode ? btns_product : 0;
+    assign coin_user_inc = config_mode ? 0 : btns_money;
+    assign coin_user_reset = config_mode ? 0 : btn_cancel;
 endmodule

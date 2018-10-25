@@ -44,10 +44,15 @@ module main_ale(
     wire [13:0] count_coins_stock_load_10;
     
     wire config_mode;
-    wire sale_done_pulse;
     wire [3:0] config_choice;
+    
+    wire sale_done_pulse;
     wire not_enough_funds_pulse;
     wire product_not_available_pulse;
+        
+    wire sale_done;
+    wire not_enough_funds;
+    wire product_not_available;
     
     
     wire [13:0] display_num;
@@ -79,6 +84,10 @@ module main_ale(
     keypad(clk, pulse_keypad, JC, JB, btns_keypad);
     keypad_organizer(clk, btns_keypad, btns_money, btns_products, btn_cancel);
     
+    pulse_extender(clk, sale_done_pulse, sale_done);
+    pulse_extender(clk, not_enough_funds_pulse, not_enough_funds);
+    pulse_extender(clk, product_not_available_pulse, product_not_available);
+        
     processor(clk, config_mode, count_coins_stock_500, count_coins_stock_100, count_coins_stock_50, count_coins_stock_10,
         count_coins_user_500, count_coins_user_100, count_coins_user_50, count_coins_user_10,
         count_product_0, count_product_1, count_product_2, count_product_3, btns_money, btns_products, btn_cancel,
@@ -88,6 +97,9 @@ module main_ale(
             
     assign config_mode = sw[15];
     assign config_choice = sw[3:0];
+    assign led[15] = sale_done;
+    assign led[14] = not_enough_funds;
+    assign led[13] = product_not_available;
     
     // Remove before flight
 //    assign sale_done = sw[14]; // REMOVE BEFORE FLIGHT
