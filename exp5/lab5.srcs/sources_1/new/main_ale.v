@@ -37,9 +37,18 @@ module main_ale(
     wire [3:0] inc_coins_user;
     wire reset_coins_user;
     
+    wire load_coins_stock;
+    wire [13:0] count_coins_stock_load_500;
+    wire [13:0] count_coins_stock_load_100;
+    wire [13:0] count_coins_stock_load_50;
+    wire [13:0] count_coins_stock_load_10;
+    
     wire config_mode;
-    wire sale_done;
+    wire sale_done_pulse;
     wire [3:0] config_choice;
+    wire not_enough_funds_pulse;
+    wire product_not_available_pulse;
+    
     
     wire [13:0] display_num;
     
@@ -50,12 +59,11 @@ module main_ale(
     wire [3:0] btns_products;
     wire btn_cancel;
     
-    assign config_mode = sw[15];
-    assign config_choice = sw[3:0];
-    
     counter_receipts(clk, inc_receipts, count_receipts);
     counter_products(clk, inc_products, dec_products, count_product_0, count_product_1, count_product_2, count_product_3);
-    counter_coin_stock(clk, inc_coins_stock, dec_coins_stock, count_coins_stock_500, count_coins_stock_100, count_coins_stock_50, count_coins_stock_10);
+    counter_coin_stock(clk, inc_coins_stock, dec_coins_stock,
+        count_coins_stock_load_500, count_coins_stock_load_100, count_coins_stock_load_50, count_coins_stock_load_10, load_coins_stock,
+        count_coins_stock_500, count_coins_stock_100, count_coins_stock_50, count_coins_stock_10);
     counter_coin_user(clk, inc_coins_user, reset_coins_user, count_coins_user_500, count_coins_user_100, count_coins_user_50, count_coins_user_10);
     
     coin_adder(count_coins_user_500, count_coins_user_100, count_coins_user_50, count_coins_user_10, total_coins_user);
@@ -70,14 +78,20 @@ module main_ale(
     pulse_generator_keypad(clk, pulse_keypad);
     keypad(clk, pulse_keypad, JC, JB, btns_keypad);
     keypad_organizer(clk, btns_keypad, btns_money, btns_products, btn_cancel);
-    assign led[8:5] = btns_money;
-    assign led[4:1] = btns_products;
-    assign led[0] = btn_cancel;
     
+    processor(clk, config_mode, count_coins_stock_500, count_coins_stock_100, count_coins_stock_50, count_coins_stock_10,
+        count_coins_user_500, count_coins_user_100, count_coins_user_50, count_coins_user_10,
+        count_product_0, count_product_1, count_product_2, count_product_3, btns_money, btns_products, btn_cancel,
+        sale_done_pulse, not_enough_funds_pulse, product_not_available_pulse, inc_coins_stock, load_coins_stock,
+        count_coins_stock_load_500, count_coins_stock_load_100, count_coins_stock_load_50, count_coins_stock_load_10,
+        inc_coins_user, reset_coins_user, inc_products, dec_products, change);
+            
+    assign config_mode = sw[15];
+    assign config_choice = sw[3:0];
     
     // Remove before flight
-    assign sale_done = sw[14]; // REMOVE BEFORE FLIGHT
-    assign inc_coins_user =  btns_money;
-    assign inc_products = btns_products;
-    assign reset_coins_user = btn_cancel;
+//    assign sale_done = sw[14]; // REMOVE BEFORE FLIGHT
+//    assign inc_coins_user =  btns_money;
+//    assign inc_products = btns_products;
+//    assign reset_coins_user = btn_cancel;
     endmodule
