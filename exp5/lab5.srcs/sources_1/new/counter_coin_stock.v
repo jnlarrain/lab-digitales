@@ -45,7 +45,14 @@ module counter_coin_stock(
     
 always @(posedge clk)
 begin
-if(inc[0]|dec[0])
+if (load)
+begin
+cuenta[0] = count_coin_stock_500;
+cuenta[1] = count_coin_stock_100;
+cuenta[2] = count_coin_stock_50;
+cuenta[3] = count_coin_stock_10;
+end
+else if(inc[0]|dec[0])
     begin
     if((cuenta[0] <9990) && inc[0])
         cuenta[0] = cuenta[0] + 1;
@@ -66,13 +73,6 @@ else if(inc[2]|dec[2])
     else if (dec[2] &&(cuenta[2]>0))
         cuenta[2] = cuenta[2] - 1;
     end
-else if (load)
-begin
-cuenta[0] = count_coin_stock_500;
-cuenta[1] = count_coin_stock_100;
-cuenta[2] = count_coin_stock_50;
-cuenta[3] = count_coin_stock_10;
-end
 else
     begin
     if((cuenta[3] <9990) && inc[3])
