@@ -26,14 +26,11 @@ module counter_coin_stock(
     assign cincuenta =  cuenta[2];
     assign diez =  cuenta[3];
 
-
     parameter c0 = 8; // 500
     parameter c1 = 9; // 100
     parameter c2 = 10; // 50
     parameter c3 = 11; // 10
     
-    
-
     initial
     begin
     cuenta[0] = c0;

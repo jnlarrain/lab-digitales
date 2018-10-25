@@ -1,24 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 24.10.2018 20:53:38
-// Design Name: 
-// Module Name: processor
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
 
 module processor(
     input clk,
@@ -39,7 +19,7 @@ module processor(
     input [3:0] btns_product,
     input btn_cancel,
     output sale_done_pulse,
-    output not_enough_funds_pulse,
+    output reg not_enough_funds_pulse,
     output reg product_not_available_pulse,
     output [3:0] coin_stock_inc,
     output coin_stock_load,
@@ -63,10 +43,15 @@ module processor(
     reg [13:0] price_product;
     
     reg [1:0] product_num;
+        
+    wire [13:0] total_coins_user;
+    
+    coin_adder(count_coin_user_500, count_coin_user_100, count_coin_user_50, count_coin_user_10, total_coins_user);
     
     always @ (posedge clk)
     begin
         product_not_available_pulse = 0;
+        not_enough_funds_pulse = 0;
         count_product = 0;
         price_product = 0;
         if (~config_mode)
@@ -100,7 +85,14 @@ module processor(
                 
                 if (count_product)
                 begin
-                    // SIGUE AQUI
+                    if (total_coins_user >= price_product)
+                    begin
+                        // Sigue aqui
+                    end
+                    else
+                    begin
+                        not_enough_funds_pulse = 1;
+                    end
                 end
                 else
                 begin
