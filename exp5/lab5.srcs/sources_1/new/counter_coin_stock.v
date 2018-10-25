@@ -28,10 +28,10 @@ module counter_coin_stock(
     assign diez =  cuenta[3];
 
 
-    parameter c1 = 10;
-    parameter c2 = 10;
-    parameter c3 = 100;
-    parameter c0 = 100;
+    parameter c0 = 100; // 500
+    parameter c1 = 10; // 100
+    parameter c2 = 10; // 50
+    parameter c3 = 100; // 10
     
     
 
