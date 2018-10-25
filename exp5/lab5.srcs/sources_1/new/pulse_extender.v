@@ -8,6 +8,12 @@ module pulse_extender(
     
     reg [27:0] count;
     
+    initial
+    begin
+    count = 0;
+    out = 0;
+    end
+    
     always @ (posedge clk)
     begin
         if (in)
