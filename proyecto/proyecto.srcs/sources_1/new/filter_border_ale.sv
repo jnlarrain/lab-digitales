@@ -2,8 +2,8 @@
 
 module filter_border_ale(
     input clk,
-    input [3:0] matrix_in [31:0][31:0][2:0],
-    output reg [3:0] matrix_out [31:0][31:0][2:0]
+    input [7:0] matrix_in [31:0][31:0][2:0],
+    output reg [7:0] matrix_out [31:0][31:0][2:0]
     );
     
     integer row_num;
