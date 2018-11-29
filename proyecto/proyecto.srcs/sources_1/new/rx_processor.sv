@@ -2,6 +2,7 @@
 
 module rx_processor(
     input clk,
+    input [3:0] sel,
     input [7:0] data,
     input change,
     output reg [3:0] matrix [31:0][31:0][2:0],
@@ -74,6 +75,40 @@ module rx_processor(
                     red = first_byte[5:2];
                     green = {first_byte[1:0], data[5:4]};
                     blue = data[3:0];
+                    
+                    if (sel == 1)
+                    begin
+                        red = 15 - red;
+                        green = 15 - green;
+                        blue = 15 - blue;
+                    end
+                    else if (sel == 2)
+                    begin
+                        green = blue;
+                        blue = green;
+                    end
+                    else if (sel == 3)
+                    begin
+                        red = green;
+                        green = red;
+                    end
+                    else if (sel == 4)
+                    begin
+                        red = green;
+                        green = blue;
+                        blue = red;
+                    end
+                    else if (sel == 5)
+                    begin
+                        red = blue;
+                        green = red;
+                        blue = green;
+                    end
+                    else if (sel == 6)
+                    begin
+                        red = blue;
+                        blue = red;
+                    end
                     
                     matrix[row][col][0] = red;
                     matrix[row][col][1] = green;

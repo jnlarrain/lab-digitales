@@ -49,7 +49,7 @@ module main(
     wire change;
     receiver(clk, 0, RsRx, change, data);
 
-    rx_processor(clk, data, change, matrix_0, led[8], led[9]);
+    rx_processor(clk, sw[14:11], data, change, matrix_0, led[8], led[9]);
     
     pulse_generator(clk, pulse);
     
