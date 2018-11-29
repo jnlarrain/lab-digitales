@@ -172,9 +172,9 @@ module rx_processor(
                     end
                     else
                     begin
-                        matrix_out[row_num][col_num][0] = matrix_in[row_num][col_num][0] << 4;
-                        matrix_out[row_num][col_num][1] = matrix_in[row_num][col_num][1] << 4;
-                        matrix_out[row_num][col_num][2] = matrix_in[row_num][col_num][2] << 4;
+                        red = red << 4;
+                        green = green << 4;
+                        blue = blue << 4;
                     end
                     
                     
