@@ -1,0 +1,18 @@
+`timescale 1ns / 1ps
+
+module filter_main(
+    input clk,
+    input sel[5:0],
+    input [4:0] matrix_in [31:0][31:0][2:0],
+    output [4:0] matrix_out [31:0][31:0][2:0]
+    );
+    
+//    always @ (posedge clk)
+//    begin
+//        case (sel)
+//        0: matrix_out = matrix_in;
+//        endcase
+//    end
+
+    assign matrix_out = (sel == 0) ? matrix_in : matrix_in;
+endmodule

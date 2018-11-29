@@ -4,7 +4,7 @@ module rx_processor(
     input clk,
     input [7:0] data,
     input change,
-    output reg [7:0] matrix [31:0][31:0][2:0],
+    output reg [3:0] matrix [31:0][31:0][2:0],
     output listen_out,
     output byte_count_out
     );
@@ -43,9 +43,9 @@ module rx_processor(
         begin
             for(col_num = 0; col_num < 32; col_num = col_num + 1)
             begin
-                matrix[row_num][col_num][0] = 128;
-                matrix[row_num][col_num][1] = 128;
-                matrix[row_num][col_num][2] = 128;
+                matrix[row_num][col_num][0] = 8;
+                matrix[row_num][col_num][1] = 8;
+                matrix[row_num][col_num][2] = 8;
             end
         end
     end
@@ -71,9 +71,9 @@ module rx_processor(
                 end
                 else
                 begin
-                    red = first_byte[5:2] << 4;
-                    green = {first_byte[1:0], data[5:4]} << 4;
-                    blue = data[3:0] << 4;
+                    red = first_byte[5:2];
+                    green = {first_byte[1:0], data[5:4]};
+                    blue = data[3:0];
                     
                     matrix[row][col][0] = red;
                     matrix[row][col][1] = green;
