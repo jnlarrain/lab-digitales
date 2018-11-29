@@ -5,7 +5,7 @@ module rx_processor(
     input [3:0] sel,
     input [7:0] data,
     input change,
-    output reg [3:0] matrix [31:0][31:0][2:0],
+    output reg [7:0] matrix [31:0][31:0][2:0],
     output listen_out,
     output byte_count_out
     );
@@ -44,9 +44,9 @@ module rx_processor(
         begin
             for(col_num = 0; col_num < 32; col_num = col_num + 1)
             begin
-                matrix[row_num][col_num][0] = 8;
-                matrix[row_num][col_num][1] = 8;
-                matrix[row_num][col_num][2] = 8;
+                matrix[row_num][col_num][0] = 128;
+                matrix[row_num][col_num][1] = 128;
+                matrix[row_num][col_num][2] = 128;
             end
         end
     end
@@ -109,6 +109,83 @@ module rx_processor(
                         red = blue;
                         blue = red;
                     end
+                    
+                    case (red)
+                    0: red = 0;
+                    1: red = 2;
+                    2: red = 4;
+                    3: red = 7;
+                    4: red = 11;
+                    5: red = 18;
+                    6: red = 30;
+                    7: red = 40;
+                    8: red = 50;
+                    9: red = 65;
+                    10: red = 80;
+                    11: red = 100;
+                    12: red = 125;
+                    13: red = 160;
+                    14: red = 200;
+                    15: red = 255;
+                    endcase
+                    
+                    case (red)
+                    0: red = 0;
+                    1: red = 2;
+                    2: red = 4;
+                    3: red = 7;
+                    4: red = 11;
+                    5: red = 18;
+                    6: red = 30;
+                    7: red = 40;
+                    8: red = 50;
+                    9: red = 65;
+                    10: red = 80;
+                    11: red = 100;
+                    12: red = 125;
+                    13: red = 160;
+                    14: red = 200;
+                    15: red = 255;
+                    endcase
+                    
+                    case (green)
+                    0: green = 0;
+                    1: green = 2;
+                    2: green = 4;
+                    3: green = 7;
+                    4: green = 11;
+                    5: green = 18;
+                    6: green = 30;
+                    7: green = 40;
+                    8: green = 50;
+                    9: green = 65;
+                    10: green = 80;
+                    11: green = 100;
+                    12: green = 125;
+                    13: green = 160;
+                    14: green = 200;
+                    15: green = 255;
+                    endcase
+                
+                    case (blue)
+                    0: blue = 0;
+                    1: blue = 2;
+                    2: blue = 4;
+                    3: blue = 7;
+                    4: blue = 11;
+                    5: blue = 18;
+                    6: blue = 30;
+                    7: blue = 40;
+                    8: blue = 50;
+                    9: blue = 65;
+                    10: blue = 80;
+                    11: blue = 100;
+                    12: blue = 125;
+                    13: blue = 160;
+                    14: blue = 200;
+                    15: blue = 255;
+                    endcase
+                    
                     
                     matrix[row][col][0] = red;
                     matrix[row][col][1] = green;
