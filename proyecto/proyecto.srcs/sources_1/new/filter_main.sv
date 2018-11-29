@@ -3,8 +3,8 @@
 module filter_main(
     input clk,
     input [5:0] sel,
-    input [4:0] matrix_in [31:0][31:0][2:0],
-    output [4:0] matrix_out [31:0][31:0][2:0]
+    input [3:0] matrix_in [31:0][31:0][2:0],
+    output [3:0] matrix_out [31:0][31:0][2:0]
     );
     
 //    always @ (posedge clk)
