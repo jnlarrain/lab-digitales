@@ -2,7 +2,8 @@
 
 module rx_processor(
     input clk,
-    input [4:0] sel,
+    input [3:0] sel,
+    input sel_2
     input [7:0] data,
     input change,
     output reg [7:0] matrix [31:0][31:0][2:0],
@@ -110,7 +111,7 @@ module rx_processor(
                         blue = red;
                     end
                     
-                    if (sel[4])
+                    if (sel_2)
                     begin           
                         case (red)
                         0: red = 0;
@@ -168,6 +169,12 @@ module rx_processor(
                         14: blue = 200;
                         15: blue = 255;
                         endcase
+                    end
+                    else
+                    begin
+                        matrix_out[row_num][col_num][0] = matrix_in[row_num][col_num][0] << 4;
+                        matrix_out[row_num][col_num][1] = matrix_in[row_num][col_num][1] << 4;
+                        matrix_out[row_num][col_num][2] = matrix_in[row_num][col_num][2] << 4;
                     end
                     
                     

@@ -24,7 +24,7 @@ module main(
     wire oe;
     
     wire [7:0] matrix_0 [31:0][31:0][2:0];
-    wire [7:0] matrix_1 [31:0][31:0][2:0];
+   // wire [7:0] matrix_1 [31:0][31:0][2:0];
     //wire [7:0] matrix_2 [31:0][31:0][2:0];
     
     wire pulse;
@@ -49,19 +49,19 @@ module main(
     wire change;
     receiver(clk, 0, RsRx, change, data);
 
-    rx_processor(clk, sw[14:10], data, change, matrix_0, led[8], led[9]);
+    rx_processor(clk, sw[13:10], sw[14], data, change, matrix_0, led[8], led[9]);
     
     pulse_generator(clk, pulse);
     
 //    assign matrix_1 = matrix_0;
     
-    filter_main(clk, sw[2:0], sw[10:3], matrix_0, matrix_1);
+    //filter_main(clk, sw[2:0], sw[10:3], matrix_0, matrix_1);
     //assign matrix_1 = matrix_0;
     
 //    matrix_generator(matrix);
     //matrix_4_bit_to_8_bit(clk, sel, matrix_1, matrix_2);
     
-    rgb_matrix(clk, pulse, matrix_1, r1, g1, b1, r2, g2, b2, a, b, c, d, clk2, stb, oe);
+    rgb_matrix(clk, pulse, matrix_0, r1, g1, b1, r2, g2, b2, a, b, c, d, clk2, stb, oe);
     
     assign led[7:0] = data;
     assign sel = sw[15];
