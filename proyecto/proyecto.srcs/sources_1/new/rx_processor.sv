@@ -4,7 +4,9 @@ module rx_processor(
     input clk,
     input [7:0] data,
     input change,
-    output reg [7:0] matrix [31:0][31:0][2:0]
+    output reg [7:0] matrix [31:0][31:0][2:0],
+    output listen_out,
+    output byte_count_out
     );
     
     integer row_num;
@@ -14,6 +16,9 @@ module rx_processor(
     reg [10:0] count;
     reg byte_count;
     reg [7:0] first_byte;
+    
+    assign listen_out = listen;
+    assign byte_count_out = byte_count;
     
     
     reg [7:0] red;
@@ -56,37 +61,35 @@ module rx_processor(
                 first_byte = 0;
                 row = 0;
                 col = 0;
+                byte_count = 0;
             end
-            else
+            else if (listen)
             begin
-                if (~count)
+                if (~byte_count)
                 begin
                     first_byte = data;
                 end
                 else
                 begin
-                    if (listen)
+                    red = first_byte[5:2] << 4;
+                    green = {first_byte[1:0], data[5:4]} << 4;
+                    blue = data[3:0] << 4;
+                    
+                    matrix[row][col][0] = red;
+                    matrix[row][col][1] = green;
+                    matrix[row][col][2] = blue;
+//                    count = count + 1;
+                    col = col + 1;
+                    if (col == 32)
                     begin
-                        red = first_byte[5:2] << 4;
-                        green = {first_byte[1:0], data[5:4]} << 4;
-                        blue = data[3:0] << 4;
-                        
-                        matrix[row][col][0] = red;
-                        matrix[row][col][1] = green;
-                        matrix[row][col][2] = blue;
-    //                    count = count + 1;
-                        col = col + 1;
-                        if (col == 32)
-                        begin
-                            col = 0;
-                            row = row + 1;
-                        end
-                        if (row == 32)
-                        begin
-                            row = 0;
-                            col = 0;
-                            listen = 0;
-                        end
+                        col = 0;
+                        row = row + 1;
+                    end
+                    if (row == 32)
+                    begin
+                        row = 0;
+                        col = 0;
+                        listen = 0;
                     end
                 end
                 byte_count = byte_count + 1;

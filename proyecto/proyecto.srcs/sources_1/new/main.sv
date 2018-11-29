@@ -45,14 +45,14 @@ module main(
     wire change;
     receiver(clk, 0, RsRx, change, data);
 
-//    rx_processor(clk, data, change, matrix);
+    rx_processor(clk, data, change, matrix, led[8], led[9]);
     
     pulse_generator(clk, pulse);
     
-    matrix_generator(matrix);
+//    matrix_generator(matrix);
     
     rgb_matrix(clk, pulse, matrix, r1, g1, b1, r2, g2, b2, a, b, c, d, clk2, stb, oe);
     
     assign led[7:0] = data;
-    assign led[15:8] = matrix[sw[11:7]][sw[6:2]][sw[1:0]];
+//    assign led[15:8] = matrix[sw[11:7]][sw[6:2]][sw[1:0]];
 endmodule
