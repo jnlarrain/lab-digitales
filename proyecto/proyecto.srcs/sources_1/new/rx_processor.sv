@@ -3,7 +3,7 @@
 module rx_processor(
     input clk,
     input [3:0] sel,
-    input sel_2
+    input sel_2,
     input [7:0] data,
     input change,
     output reg [7:0] matrix [31:0][31:0][2:0],
