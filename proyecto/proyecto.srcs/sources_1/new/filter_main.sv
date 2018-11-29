@@ -13,6 +13,8 @@ module filter_main(
 //        0: matrix_out = matrix_in;
 //        endcase
 //    end
-
-    assign matrix_out = matrix_in;
+    wire [3:0] matrix_border [31:0][31:0][2:0];
+    
+    filter_border_ale(clk, matrix_in, matrix_border);
+    assign matrix_out = (sel == 0) ? matrix_in : matrix_border;
 endmodule
